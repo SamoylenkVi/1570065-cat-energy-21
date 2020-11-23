@@ -1,0 +1,50 @@
+.banner__wrapper {
+  background-image: url(../../img/banner-bottle.png),
+    url(../../img/banner-cat.jpg);
+  background-repeat: no-repeat;
+  height: 700px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100px,cover;
+  z-index: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 0;
+    width: 100%;
+    background-color:$basic-green;
+    opacity: 0.85;
+    z-index: -1;
+  }
+
+}
+.banner__title {
+  @include font-options(
+    $family-oswald,
+    $heading-font-size,
+    $special-heading-line-height,
+    $normal-font-weight,
+    $basic-white
+  );
+}
+.banner__slogan {
+  @include font-options(
+    $family-oswald,
+    $base-font-size,
+    $special-line-height,
+    $normal-font-weight,
+    $basic-white
+  );
+}
+.banner__link {
+  @include font-options($family-oswald, $header-font-size, $header-line-height, $normal-font-weight, $basic-white);
+  @include link-default-remove;
+  @include transform;
+  display: inline-block;
+  background-color: $basic-green;
+  color:$basic-white;
+
+}

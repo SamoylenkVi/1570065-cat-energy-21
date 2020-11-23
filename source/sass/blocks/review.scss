@@ -1,0 +1,69 @@
+.review__wrapper {
+  background-color: $basic-grey;
+}
+
+.review__title {
+  @include font-options(
+    $family-oswald,
+    $heading-font-size,
+    $heading-line-height,
+    $normal-font-weight,
+    $basic-black
+  );
+}
+
+.review__statistics-title {
+  @include font-options(
+    $family-oswald,
+    $subtitle-font-size,
+    $number-line-height,
+    $normal-font-weight,
+    $basic-black
+  );
+}
+
+.review__statistics-subtitle {
+  @include font-options(
+    $family-arial,
+    $min-font-size,
+    $min-line-height,
+    $normal-font-weight,
+    $special_dark-grey
+  );
+}
+
+.review__total-title,
+.review__total-subtitle {
+  @include font-options(
+    $family-oswald,
+    $base-font-size,
+    $header-line-height,
+    $normal-font-weight,
+    $basic-black
+  );
+}
+
+.review__filter-text {
+  @include font-options(
+    $family-oswald,
+    $form-font-size,
+    $header-line-height,
+    $normal-font-weight,
+    $basic-black
+  );
+}
+
+.review__scale {
+  width: 84px;
+  height: 14px;
+  background-color: $basic-white;
+  border: 2px solid $border-grey;
+  border-radius: 20px;
+}
+
+.review__bar {
+  width: 35px;
+  height: 6px;
+  background-color: $basic-green;
+  border-radius: 20px;
+}

@@ -1,0 +1,6 @@
+.navigation__list{
+  @include list-default-remove;
+}
+.navigation__link{
+  @include link-default-remove;
+}

@@ -1,0 +1,23 @@
+.product__title {
+  @include font-options(
+    $family-oswald,
+    $form-font-size,
+    $header-line-height,
+    $normal-font-weight,
+    $special_dark-grey-2
+  );
+  @include transform;
+}
+.product__text {
+  @include font-options(
+    $family-oswald,
+    $min-font-size,
+    $special-line-height,
+    $normal-font-weight,
+    $special_dark-grey
+  );
+}
+.product__button--more {
+  color: $special_dark-grey;
+  background-color:$basic-grey;
+}
