@@ -1,18 +1,12 @@
-.page{
+.page {
   height: 100%;
 }
-.page__wrapper{
+.page__wrapper {
   margin: 0 auto;
 }
 .page__body {
-  @include font-options($family-arial, $base-font-size, $base-line-height, $normal-font-weight, $special_dark-grey)
+  @include font-options($family-arial, $base-font-size, $base-line-height, $normal-font-weight, $special_dark-grey);
 }
 .page__title {
-  @include font-options(
-    $family-oswald,
-    $heading-font-size,
-    $special-heading-line-height,
-    $normal-font-weight,
-    $basic-black
-  );
+  @include font-options($family-oswald, $heading-font-size, $special-heading-line-height, $normal-font-weight, $basic-black);
 }

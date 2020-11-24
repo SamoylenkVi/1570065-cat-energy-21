@@ -1,12 +1,7 @@
 .advantages__title {
-  @include font-options(
-    $family-oswald,
-    $heading-font-size,
-    $heading-line-height,
-    $normal-font-weight,
-    $basic-black
-  );
+  @include font-options($family-oswald, $heading-font-size, $heading-line-height, $normal-font-weight, $basic-black);
 }
 .advantages__list {
   @include list-default-remove;
+  @include remove-indentation;
 }
