@@ -1,0 +1,4 @@
+.header {
+  @include font-options($family-oswald, $header-font-size, $header-line-height, $bold-font-weight, $special_dark-grey);
+  color: $basic-black;
+}

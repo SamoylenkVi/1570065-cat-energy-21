@@ -1,0 +1,4 @@
+.address__title {
+  @include font-options($family-oswald, $form-font-size, $base-line-height, $normal-font-weight, $special-black);
+  text-transform: uppercase;
+}

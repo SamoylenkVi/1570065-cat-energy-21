@@ -1,0 +1,10 @@
+.extra-product__main-title {
+  @include font-options($family-oswald, $subtitle-font-size, $number-line-height, $normal-font-weight, $basic-black);
+}
+.extra-product__title {
+  @include font-options($family-oswald, $form-font-size, $special-line-height, $normal-font-weight, $special_dark-grey-2);
+  text-transform: uppercase;
+}
+.extra-product__text {
+  @include font-options($family-oswald, $base-font-size, $text-line-height, $normal-font-weight, $special_dark-grey);
+}

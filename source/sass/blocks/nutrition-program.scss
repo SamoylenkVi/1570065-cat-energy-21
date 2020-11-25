@@ -1,0 +1,17 @@
+.nutrition-program__list {
+  @include list-default-remove;
+  @include remove-indentation;
+}
+
+.nutrition-program__program {
+  background-color: $basic-grey;
+}
+
+.program__title {
+  @include font-options($family-oswald, $subtitle-font-size, $subtitle-line-height, $normal-font-weight, $basic-black);
+  text-transform: uppercase;
+}
+.program__link {
+  @include link-default-remove($basic-black);
+  text-transform: uppercase;
+}

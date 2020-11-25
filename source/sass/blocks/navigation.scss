@@ -1,0 +1,7 @@
+.navigation__list{
+  @include list-default-remove;
+  @include remove-indentation;
+}
+.navigation__link{
+  @include link-default-remove;
+}

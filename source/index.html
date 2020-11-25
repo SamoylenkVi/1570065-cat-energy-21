@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <title>HTML Academy: Кэт энерджи</title>
-  </head>
-  <body class="page__body">
+
+<head>
+  <meta charset="utf-8" />
+  <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/vendor/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page__body">
+  <div class="page__wrapper">
     <header class="page__header header">
       <div class="header__wrapper wrapper">
         <a class="header__logo">
-          <img src="https://via.placeholder.com/150x150" />
-          <img src="https://via.placeholder.com/150x150" />
+          <img src="img/logo-mobile.svg" width="33" height="37" alt="Логотип cat Energy кот">
+          <img src="img/footer-logo 2.svg" width="101" height="18" alt="cat Energy">
         </a>
         <nav class="header__navigation navigation">
           <button class="navigation__toggle" type="button">
@@ -17,13 +21,13 @@
           </button>
           <ul class="navigation__list">
             <li class="navigation__item navigation__item--active">
-              <a>Главная</a>
+              <a class="navigation__link">Главная</a>
             </li>
             <li class="navigation__item">
-              <a href="">Каталог продукции</a>
+              <a class="navigation__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="navigation__item">
-              <a href="form.html">Подбор программы</a>
+              <a class="navigation__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -47,22 +51,27 @@
         <div class="nutrition-program__wrapper wrapper">
           <h2 class="visually-hidden">Список программ питания</h2>
           <ul class="nutrition-program__list">
-            <li class="nutrition-program__item program">
-              <h3 class="program__title">Похудение</h3>
-              <p class="program__content">
-                Ваш кот весит больше собаки и почти утратил способность лазить
-                по деревьям? Пора на диету! Cat Energy Slim поможет вашему
-                питомцу сбросить лишний вес.
-              </p>
-              <a class="program__link" href="">Каталог slim</a>
+            <li class="nutrition-program__item">
+              <div class="nutrition-program__program program-slim">
+                <h3 class="program__title">Похудение</h3>
+                <p class="program__content">
+                  Ваш кот весит больше собаки и почти утратил способность лазить
+                  по деревьям? Пора на диету! Cat Energy Slim поможет вашему
+                  питомцу сбросить лишний вес.
+                </p>
+                <a class="program__link" href="">Каталог slim</a>
+              </div>
             </li>
             <li class="nutrition-program__item program">
-              <h3 class="program__title">Набор массы</h3>
-              <p class="program__content">
-                Заработать авторитет среди дворовых котов и даже собак? Серия
-                Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
-              </p>
-              <a class="program__link" href="">Каталог pro</a>
+              <div class="nutrition-program__program program-fat">
+                <h3 class="program__title">Набор массы</h3>
+                <p class="program__content">
+                  Заработать авторитет среди дворовых котов и даже собак? Серия
+                  Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+                </p>
+                <a class="program__link" href="">Каталог pro</a>
+              </div>
+            </li>
             </li>
           </ul>
         </div>
@@ -103,21 +112,27 @@
             этом он не менял своих привычек и по-прежнему спит по 16 часов в
             день.
           </p>
-          <div class="review__statistics statistics">
-            <div class="statistics__information information">
-              <p class="information__title">5 КГ</p>
-              <p class="information__subtitle">Cнижение веса</p>
-              <p class="information__title">60 ДНЕЙ</p>
-              <p class="information__subtitle">Затрачено времени</p>
+          <div class="review__statistics">
+            <div class="review__statistics-wrapper">
+              <p class="review__statistics-title">5 КГ</p>
+              <p class="review__statistics-subtitle">Cнижение веса</p>
+              <p class="review__statistics-title">60 ДНЕЙ</p>
+              <p class="review__statistics-subtitle">Затрачено времени</p>
             </div>
-            <div class="statistics__total total">
-              <p class="total__title">Затраты на питание:</p>
-              <p class="total__subtitle">15 000 РУБ.</p>
+            <div class="review__total">
+              <p class="review__total-title">Затраты на питание:</p>
+              <p class="review__total-subtitle">15 000 РУБ.</p>
             </div>
           </div>
           <div class="review__form">
             <img src="https://via.placeholder.com/150x150" />
-            <label> Было<input type="range" />Стало </label>
+            <div class="review__fiter">
+              <p class="review__filter-text">Было</p>
+              <div class="review__scale">
+                <div class="review__bar"></div>
+              </div>
+              <p class="review__filter-text">Стало</p>
+            </div>
           </div>
         </div>
       </section>
@@ -128,23 +143,14 @@
           <p class="address__content">
             ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
           </p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1605374155339!5m2!1sru!2sru"
-            width="600"
-            height="450"
-            frameborder="0"
-            style="border: 0"
-            allowfullscreen=""
-            aria-hidden="false"
-            tabindex="0"
-          ></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1605374155339!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
       </section>
     </main>
     <footer class="page__footer footer">
       <div class="footer__wrapper wrapper">
         <div class="footer__logo">
-          <img src="https://via.placeholder.com/150x150" />
+          <img src="img/footer-logo 2.svg" width="101" height="18" alt="cat Energy">
         </div>
         <div class="footer__social social">
           <h2 class="visually-hidden">Социальные сети</h2>
@@ -168,14 +174,13 @@
         </div>
         <div class="footer__copyright copyright">
           <p class="copyright__content">HTML Academy</p>
-          <a
-            class="copyright__link"
-            href="https://htmlacademy.ru/intensive/adaptive"
-          >
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <img src="https://via.placeholder.com/150x150" />
           </a>
         </div>
       </div>
     </footer>
-  </body>
+  </div>
+</body>
+
 </html>

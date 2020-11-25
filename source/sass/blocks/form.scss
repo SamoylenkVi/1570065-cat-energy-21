@@ -1,0 +1,52 @@
+.form__main-title {
+  @include font-options($family-oswald, $base-font-size, $base-line-height, $normal-font-weight, $basic-black);
+}
+
+.form__box {
+  border: none;
+}
+
+.form__box--base {
+  border-bottom: 1px solid $special-border-grey;
+}
+
+.form__box--additional {
+  border-top: 2px solid $basic-green;
+}
+
+.form__title {
+  @include font-options($family-oswald, $subtitle-font-size, $form-line-height, $normal-font-weight, $basic-black);
+}
+
+.form__item-name {
+  @include font-options($family-oswald, $form-font-size, $base-line-height, $normal-font-weight, $special_dark-grey);
+  text-transform: uppercase;
+}
+
+.form__entry-field {
+  border: 1px solid $border-grey;
+  &::placeholder {
+    @include font-options($family-oswald, $form-font-size, $base-line-height, $normal-font-weight, $special_dark-grey);
+    text-transform: uppercase;
+  }
+}
+
+.form__goal-list,
+.form__extra-list {
+  @include list-default-remove;
+  @include remove-indentation;
+}
+
+.form__item-name--radio {
+  color: $special_dark-grey-2;
+}
+.form__button{
+  @include font-options($family-oswald, $form-font-size, $header-line-height, $normal-font-weight, $basic-white);
+  text-transform: uppercase;
+  background-color: $basic-green;
+  border: none;
+}
+
+.form__subtitle {
+  @include font-options($family-arial, $base-font-size, $special-line-height, $normal-font-weight, $basic-black);
+}
