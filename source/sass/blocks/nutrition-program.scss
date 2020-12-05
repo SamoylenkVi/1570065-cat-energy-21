@@ -1,17 +1,80 @@
 .nutrition-program__list {
   @include list-default-remove;
   @include remove-indentation;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 19px;
+  @include tablet {
+    gap: 29px;
+  }
+  @include desktop{
+    grid-template-columns: 1fr 1fr;
+    gap: 79px;
+  }
 }
-
+.nutrition-program__item {
+  background-color: $special-border-grey;
+  @include tablet{
+ padding: 75px 38% 23px 7.5%;
+}
+@include desktop{
+  padding: 77px 56px 1px 52px
+}
+}
+.nutrition-program__item--after{
+  @include tablet {
+    padding: 75px 44% 23px 7.5%;
+  }
+  @include desktop{
+    padding: 77px 56px 1px 52px
+  }
+}
 .nutrition-program__program {
   background-color: $basic-grey;
 }
 
-.program__title {
+.nutrition-program__title {
   @include font-options($family-oswald, $subtitle-font-size, $subtitle-line-height, $normal-font-weight, $basic-black);
   text-transform: uppercase;
+  margin: 0;
+  padding: 32px 45px 19px 91px;
+  @include tablet {
+    font-size: $heading-font-size;
+    line-height: $special-heading-line-height;
+    padding: 0;
+    padding-bottom: 27px;
+  }
+  @include desktop{
+    padding: 0px 93px 74px 162px;
+  }
 }
-.program__link {
+.nutrition-program__content {
+  padding: 9px 27px 30px 20px;
+  margin: 0;
+  @include tablet {
+    font-size: $form-font-size;
+    line-height: $number-line-height;
+    padding: 0;
+    padding-bottom: 52px;
+  }
+  @include desktop{
+    padding-bottom: 27px;
+  }
+}
+.nutrition-program__link {
+  @include font-options($family-oswald, $form-font-size, $special-line-height, $normal-font-weight, $basic-black);
   @include link-default-remove($basic-black);
   text-transform: uppercase;
+  min-height: 24px;
+  display: inline-block;
+  padding: 12px 51px 20px 18px;
+  @include tablet {
+    font-size: $header-font-size;
+    line-height: $special-tablet-link;
+    padding: 0;
+    padding-bottom: 35px;
+  }
+  @include desktop{
+    padding-bottom: 55px;
+  }
 }

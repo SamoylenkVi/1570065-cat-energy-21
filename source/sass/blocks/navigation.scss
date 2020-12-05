@@ -1,7 +1,46 @@
-.navigation__list{
+.navigation__toggle {
+  @include tablet {
+    display: none;
+  }
+}
+.navigation__list {
   @include list-default-remove;
   @include remove-indentation;
+  margin-bottom: 2px;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-top:21px
+  }
+
 }
-.navigation__link{
-  @include link-default-remove;
+.navigation__link {
+  @include font-options($family-oswald, $header-font-size, $header-line-height, $bold-font-weight, $basic-black);
+  @include link-default-remove($basic-black);
+  text-transform: uppercase;
+  text-align: center;
+  min-height: 65px;
+  display: grid;
+  align-items: center;
+  padding: 5px 15px;
+  @include tablet {
+    min-height: auto;
+    padding: 0;
+    font-weight: $normal-font-weight;
+    font-size: 18px;
+    line-height: $number-line-height;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-left: 36px;
+    margin-bottom: 10px;
+  }
+  @include desktop {
+    font-size:$header-font-size;
+    line-height: $special-tablet-link;
+      z-index: 1;
+  }
 }
