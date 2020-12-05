@@ -1,0 +1,12 @@
+.wrapper {
+  padding-left: 6.25%;
+  padding-right: 6.25%;
+  @include tablet {
+    padding-left: 3.9%;
+    padding-right: 3.9%;
+  }
+  @include desktop{
+    padding-left: 7.63%;
+    padding-right: 7.63%;
+  }
+}

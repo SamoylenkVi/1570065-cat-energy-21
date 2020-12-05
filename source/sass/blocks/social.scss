@@ -1,0 +1,31 @@
+.footer__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 53px;
+}
+.social__list {
+  @include list-default-remove;
+  @include remove-indentation;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 22px;
+}
+.social__item{
+  margin-right: 13px;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.social__item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
