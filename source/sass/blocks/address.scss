@@ -1,4 +1,85 @@
+
+.address__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 114px;
+  padding: 10px 6.25%;
+  @include tablet {
+    min-height: 201px;
+    padding: 10px 3.9%;
+  }
+  @include desktop{
+    bottom: 9%;
+    left: 7.7%;
+    position: absolute;
+    width: 570px;
+    height: 201px;
+    background-color: white;
+    z-index: 1;
+  }
+}
 .address__title {
-  @include font-options($family-oswald, $form-font-size, $base-line-height, $normal-font-weight, $special-black);
+  @include font-options($family-oswald, $form-font-size, $header-line-height, $normal-font-weight, $special-black);
   text-transform: uppercase;
+  margin: 0;
+  @include tablet {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    vertical-align: middle;
+    margin-right: auto;
+    width: 200px;
+    padding-left: 12%;
+    padding-top: 5px;
+  }
+  @include desktop{
+    padding-left: 8%;
+    padding-top: 8px;
+  }
+}
+.address__text {
+  margin: 0;
+  line-height: $header-line-height;
+  @include tablet {
+    font-size: $form-font-size;
+    line-height: $header-line-height;
+    text-align: right;
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 200px;
+    min-height: 83px;
+    padding-right: 43px;
+    margin-top: 10px;
+  }
+  @include desktop{
+    align-items: flex-start;
+    text-align: left;
+    width: 88%;
+    margin-left: 40px;
+    margin-top: 13px;
+  }
+}
+.address__text span {
+  padding-top: 20px;
+  text-align: center;
+}
+.address__map-wrapper {
+  position: relative;
+  min-height: 362px;
+  @include tablet {
+    min-height: 399px;
+  }
+  @include desktop{
+  min-height: 400px;
+  }
+}
+.address__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

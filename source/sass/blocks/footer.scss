@@ -1,0 +1,33 @@
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include tablet {
+    min-height: 146px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+.footer__copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 79px;
+  padding-top: 10px;
+}
+.footer__copyright-content {
+  margin: 0;
+  font-size: $form-font-size;
+  padding: 0 8px 5px 0;
+  @include tablet {
+    padding: 0 24px 4px 0;
+  }
+}
