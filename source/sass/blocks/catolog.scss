@@ -1,0 +1,24 @@
+.catalog__wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include tablet{
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(auto-fill,  minmax(324px, 1fr));
+    gap: 60px;
+  }
+  @include desktop{
+    grid-template-columns: repeat(auto-fill, 245px);
+  }
+  }
+  // .catalog__product{
+  //   width: 280px;
+  //   @include tablet{
+  //     width: 324px;
+  //   }
+  //   @include desktop{
+  //     width: 245px;
+  //   }
+  // }
