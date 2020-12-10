@@ -14,16 +14,33 @@
   justify-content: center;
   align-items: center;
   min-height: 100px;
+  &--form{
+    min-height: 93px;
+  }
 }
 .footer__copyright {
+  min-height: 79px;
+  padding-top: 10px;
+  @include tablet{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.foter__copyright-link {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-height: 79px;
-  padding-top: 10px;
+  flex-wrap: wrap;
+  background-color:$basic-white;
+  color:$basic-black;
 }
 .footer__copyright-content {
+  @include font-options($family-arial, $base-font-size, $base-line-height, $normal-font-weight, $special_dark-grey);
+  text-transform: none;
   margin: 0;
   font-size: $form-font-size;
   padding: 0 8px 5px 0;

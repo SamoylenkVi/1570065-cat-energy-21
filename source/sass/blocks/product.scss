@@ -1,11 +1,115 @@
+
+.product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include tablet{
+  padding-bottom: 24px;
+
+  }
+}
+.product__wrapper{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ width: 100%;
+ @include tablet{
+   flex-direction: column;
+ }
+}
+.product__content{
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 23px;
+  @include tablet{
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 34px;
+  }
+}
+.product__content-list{
+  min-width: 142px;
+  min-height: 44px;
+  border-collapse: collapse;
+  @include tablet{
+    min-width: 252px;
+  }
+  @include desktop{
+    min-width: 173px;
+  }
+  }
+  .product__content-item{
+    @include tablet{
+    border-bottom: 1px solid black;
+    }
+  }
 .product__title {
   @include font-options( $family-oswald, $form-font-size, $header-line-height, $normal-font-weight, $special_dark-grey-2);
   text-transform: uppercase;
+  margin: 0;
+  padding: 20px 43px 14px 2px;
+  @include tablet{
+    font-size: $header-font-size;
+    line-height: $number-line-height;
+    text-align: center;
+    padding: 19px 89px 15px 93px;
+  }
+  @include desktop{
+    padding: 0;
+  }
 }
 .product__text {
-  @include font-options($family-oswald, $min-font-size, $special-line-height, $normal-font-weight, $special_dark-grey);
+  @include font-options($family-arial, $min-font-size, $special-line-height, $normal-font-weight, $special_dark-grey);
+  padding: 0;
+  padding-left: 2px;
+  &--description{
+  text-align: right;
 }
-.product__link--more {
+@include tablet{
+  font-size: $form-font-size;
+  min-height: 30px;
+  padding: 6px 2px 8.9px 1px;
+}
+}
+.product__link{
+  width: 280px;
+  @include tablet{
+    width: 248px;
+    @include desktop{
+      width:148px
+    }
+  }
+&--more {
+  min-height: 60px;
   color: $special_dark-grey;
   background-color: $basic-grey;
+}
+}
+.extra-product__wrapper{
+ @include desktop{
+ display: grid;
+grid-template-columns: 3fr 1fr;
+ }
+}
+.extra-product__list{
+  @include desktop{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+.extra-product__item{
+  @include tablet{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  }
+}
+.extra-product-price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include tablet{
+    justify-content: space-around;
+  }
 }

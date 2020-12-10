@@ -18,6 +18,11 @@
     background-color: white;
     z-index: 1;
   }
+  &--form{
+    @include desktop{
+    bottom: 11.8%;
+    }
+  }
 }
 .address__title {
   @include font-options($family-oswald, $form-font-size, $header-line-height, $normal-font-weight, $special-black);
