@@ -29,3 +29,16 @@
     @content;
 }
 }
+@mixin border ($left, $right) {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: $basic-green;
+    left: $left;
+    right: $right;
+    z-index: -1;
+}
+@mixin border-tablet($left, $right) {
+      left: $left;
+      right: $right;
+}
