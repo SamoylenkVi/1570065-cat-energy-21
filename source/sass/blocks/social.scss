@@ -4,7 +4,11 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 53px;
+  min-height: 63px;
+  border-bottom: 1px solid $special-border-grey;
+  @include tablet{
+    border: none;
+  }
 }
 .social__list {
   @include list-default-remove;

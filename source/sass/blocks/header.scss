@@ -1,10 +1,10 @@
 .header__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 13px 0 0;
+  padding: 13px 0 1px;
   @include tablet {
     min-height: 88px;
-    padding: 10px 3.9% 0;
+    padding: 10px 30px 1px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -19,8 +19,7 @@
 }
 .header__logo {
   min-height: 35px;
-  padding-bottom: 4%;
-  margin-left: 6%;
+  padding-bottom: 12px;
   @include tablet {
     display: flex;
     justify-content: flex-start;

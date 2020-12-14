@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 53px 14.6% 46px;
+    padding: 53px 112px 46px;
     margin-bottom: 479px;
   }
   @include desktop {
@@ -139,7 +139,7 @@
 }
 .banner__link {
   @include font-options($family-oswald, $base-font-size, $base-line-height, $normal-font-weight, $basic-white);
-  margin: 0 6.25% 7%;
+  margin: 0 20px 22px;
 
   @include tablet {
     margin: 0;

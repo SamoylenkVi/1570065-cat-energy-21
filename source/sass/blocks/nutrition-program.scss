@@ -13,9 +13,10 @@
   }
 }
 .nutrition-program__item {
-  background-color: $special-border-grey;
+  padding: 9px 20px 20px;
+  background-color: $basic-grey;
   @include tablet{
- padding: 75px 38% 23px 7.5%;
+ padding: 75px 269px 23px 53px;
 }
 @include desktop{
   padding: 77px 56px 1px 52px
@@ -37,7 +38,7 @@
   @include font-options($family-oswald, $subtitle-font-size, $subtitle-line-height, $normal-font-weight, $basic-black);
   text-transform: uppercase;
   margin: 0;
-  padding: 32px 45px 19px 91px;
+  padding: 20px 22px 30px 72px;
   @include tablet {
     font-size: $heading-font-size;
     line-height: $special-heading-line-height;
@@ -49,8 +50,8 @@
   }
 }
 .nutrition-program__content {
-  padding: 9px 27px 30px 20px;
   margin: 0;
+  padding-bottom: 22px;
   @include tablet {
     font-size: $form-font-size;
     line-height: $number-line-height;
@@ -64,15 +65,18 @@
 .nutrition-program__link {
   @include font-options($family-oswald, $form-font-size, $special-line-height, $normal-font-weight, $basic-black);
   @include link-default-remove($basic-black);
+  border-top: 1px solid $special-border-grey;
   text-transform: uppercase;
   min-height: 24px;
   display: inline-block;
-  padding: 12px 51px 20px 18px;
+  padding: 19px 51px 0px 0px;
+  width: 100%;
   @include tablet {
     font-size: $header-font-size;
     line-height: $special-tablet-link;
     padding: 0;
     padding-bottom: 35px;
+    border: none;
   }
   @include desktop{
     padding-bottom: 55px;

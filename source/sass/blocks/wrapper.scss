@@ -1,12 +1,12 @@
 .wrapper {
-  padding-left: 6.25%;
-  padding-right: 6.25%;
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
   @include tablet {
-    padding-left: 3.9%;
-    padding-right: 3.9%;
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
   }
   @include desktop{
-    padding-left: 7.63%;
-    padding-right: 7.63%;
+    padding-left: $desctop-padding;
+    padding-right: $desctop-padding;
   }
 }

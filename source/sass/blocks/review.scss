@@ -27,7 +27,7 @@
   margin: 0;
   padding: 16px 0 25px;
   @include tablet {
-    padding: 16px 4% 51px 0;
+    padding: 16px 28px 51px 0;
   }
   @include desktop{
     padding: 16px 171px 67px 0;
@@ -52,7 +52,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 31px;
+  gap: 33px;
   margin-bottom: 3px;
   @include tablet {
     gap: 43px;
@@ -93,7 +93,7 @@
   margin-top: -8px;
   background-color: #f2f2f2;
   width: 69%;
-  padding: 0 5%;
+  padding: 0 6px;
   @include tablet {
     font-size: $base-font-size;
     line-height: $text-line-height;
@@ -183,7 +183,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
   min-height: 40px;
-  padding: 5% 9% 13% 10%;
+  padding: 14px 24px 37px 27px;
   align-items: center;
   @include tablet{
     padding: 23px 6.5% 69px;

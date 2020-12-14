@@ -4,10 +4,9 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   min-height: 114px;
-  padding: 10px 6.25%;
   @include tablet {
     min-height: 201px;
-    padding: 10px 3.9%;
+
   }
   @include desktop{
     bottom: 9%;
@@ -35,11 +34,11 @@
     vertical-align: middle;
     margin-right: auto;
     width: 200px;
-    padding-left: 12%;
+    padding-left: 42px;
     padding-top: 5px;
   }
   @include desktop{
-    padding-left: 8%;
+        padding-left: 76px;
     padding-top: 8px;
   }
 }
@@ -62,7 +61,7 @@
   @include desktop{
     align-items: flex-start;
     text-align: left;
-    width: 88%;
+    width: 70%;
     margin-left: 40px;
     margin-top: 13px;
   }

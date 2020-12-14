@@ -10,7 +10,7 @@
 .advantages__title {
   @include font-options($family-oswald, $heading-font-size, $heading-line-height, $normal-font-weight, $basic-black);
   margin: 0;
-  padding: 30px 0 37px;
+  padding: 26px 0 37px;
   @include tablet {
     font-size:$heading-tablet-size;
     line-height:$heading-tablet-line;
@@ -43,7 +43,7 @@
   padding-left: 81px;
   min-height: 60px;
   @include tablet{
-    padding: 118px 19% 46px 0;
+    padding: 118px 61px 46px 0;
   }
   @include desktop {
     padding: 114px 1px 46px 0;
