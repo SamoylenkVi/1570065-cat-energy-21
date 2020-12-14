@@ -27,8 +27,8 @@
             <li class="navigation__item">
               <a class="navigation__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="navigation__item navigation__item--active">
-              <a class="navigation__link">Подбор программы</a>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--active">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -36,7 +36,7 @@
     </header>
     <main class="page__main">
       <h1 class="page__title title">Подбор программы</h1>
-      <form class="form wrapper" action="https://echo.htmlacademy.ru" method="GET">
+      <form class="form__wrapper wrapper" action="https://echo.htmlacademy.ru" method="GET">
         <h2 class="form__main-title">
           Заполните анкету, и мы подберем</br>
           программу питания для вашего кота
@@ -47,15 +47,15 @@
             <ul class="form__information-list">
               <li class="form__information-item">
                 <label for="cat-name" class="form__item-name form__item-name--information">ИМЯ:*</label>
-                <input class="form__entry-field form__entry-field--information" type="text" id="cat-name" name="cat-name" placeholder="Барсик" aria-label="Введите имя вашего кота" required />
+                <input class="form__entry-field  form__entry-field--information filed__input-information" type="text" id="cat-name" name="cat-name" placeholder="Барсик" aria-label="Введите имя вашего кота" required />
               </li>
               <li class="form__information-item">
                 <label for="cat-weight" class="form__item-name form__item-name--information">Вес (кг):*</label>
-                <input class="form__entry-field form__entry-field--information" type="text" id="cat-weight" name="cat-weight" placeholder="7" aria-label="Введите вес вашего кота" required />
+                <input class="form__entry-field form__entry-field--information filed__input-information" type="text" id="cat-weight" name="cat-weight" placeholder="7" aria-label="Введите вес вашего кота" required />
               </li>
               <li class="form__information-item">
                 <label for="cat-age" class="form__item-name form__item-name--information">Возраст (лет):</label>
-                <input class="form__entry-field form__entry-field--information" type="text" id="cat-age" name="cat-age" placeholder="7" aria-label="Введите возраст вашего кота" />
+                <input class="form__entry-field form__entry-field--information filed__input-information" type="text" id="cat-age" name="cat-age" placeholder="7" aria-label="Введите возраст вашего кота" />
               </li>
             </ul>
           </fieldset>
@@ -63,15 +63,15 @@
             <legend class="visually-hidden">Цель программы</legend>
             <ul class="form__goal-list">
               <li class="form__goal-item">
-                <input class="visually-hidden" type="radio" name="goal" id="slim" checked aria-label="Коту необходимо похудеть" />
+                <input class="visually-hidden filed__radio" type="radio" name="goal" id="slim" checked aria-label="Коту необходимо похудеть" />
                 <label class="form__item-name form__item-name--radio" for="slim">Похудение</label>
               </li>
               <li class="form__goal-item">
-                <input class="visually-hidden" type="radio" name="goal" id="fat" aria-label="Коту необходимо набрать массу" />
+                <input class="visually-hidden filed__radio" type="radio" name="goal" id="fat" aria-label="Коту необходимо набрать массу" />
                 <label class="form__item-name form__item-name--radio" for="fat">Набор массы</label>
               </li>
               <li class="form__goal-item">
-                <input class="visually-hidden" type="radio" name="goal" id="advice" aria-label="Нужен ваш совет" />
+                <input class="visually-hidden filed__radio" type="radio" name="goal" id="advice" aria-label="Нужен ваш совет" />
                 <label class="form__item-name form__item-name--radio" for="advice">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
@@ -79,42 +79,42 @@
         </div>
         <fieldset class="form__person-information form__box form__box--additional">
           <legend class="form__title title">
-            Контактные данные (владельца кота)
+            Контактные данные</br> (владельца кота)
           </legend>
           <ul class="form__information-list form__information-list--person">
             <li class="form__information-item">
               <label for="email" class="form__item-name form__item-name--person">E-mail:*</label>
-              <input class="form__entry-field form__entry-field--person" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" aria-label="Введите ваш email" required />
+              <input class="form__entry-field form__entry-field--person filed__person-information" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" aria-label="Введите ваш email" required />
             </li>
             <li class="form__information-item">
               <label for="phone" class="form__item-name form__item-name--person form__tel">Телефон:*</label>
-              <input class="form__entry-field form__tel-field form__entry-field--person " type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" aria-label="Введите ваш телефон" required pattern="\8\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" />
+              <input class="form__entry-field form__tel-field form__entry-field--person filed__person-information" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" aria-label="Введите ваш телефон" required pattern="\8\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" />
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__comment form__box form__box--additional">
           <legend class="form__title title">Комментарий</legend>
           <div class="form__information-item form__information-item--comment">
-          <textarea class="form__entry-field form__entry-field--comment" placeholder="Расскажите обо всех повадках кота" name="comment" aria-label="Расскажите обо всех повадках вашего кота"></textarea>
+          <textarea class="form__entry-field form__entry-field--comment field__comment" placeholder="Расскажите обо всех повадках кота" name="comment" aria-label="Расскажите обо всех повадках вашего кота"></textarea>
         </div>
         </fieldset>
         <fieldset class="form__extra form__box form__box--additional">
           <legend class="form__title form__title--extra title">Дополнительно</legend>
           <ul class="form__extra-list">
             <li class="form__extra-item">
-              <input class="visually-hidden" type="checkbox" name="sugar-substitute" id="sugar-substitute" checked />
+              <input class="visually-hidden filed__checkbox" type="checkbox" name="sugar-substitute" id="sugar-substitute" checked />
               <label class="form__item-name form__item-name--radio" for="sugar-substitute">Сахарозаменитель</label>
             </li>
             <li class="form__extra-item">
-              <input class="visually-hidden" type="checkbox" name="water" id="water" />
+              <input class="visually-hidden filed__checkbox" type="checkbox" name="water" id="water" />
               <label class="form__item-name form__item-name--radio" for="water">Питьевая вода</label>
             </li>
             <li class="form__extra-item">
-              <input class="visually-hidden" type="checkbox" name="milk" id="milk" />
+              <input class="visually-hidden filed__checkbox" type="checkbox" name="milk" id="milk" />
               <label class="form__item-name form__item-name--radio" for="milk">Молоко</label>
             </li>
             <li class="form__extra-item">
-              <input class="visually-hidden" type="checkbox" name="vitamins" id="vitamins" />
+              <input class="visually-hidden filed__checkbox" type="checkbox" name="vitamins" id="vitamins" />
               <label class="form__item-name form__item-name--radio" for="vitamins">Витамины</label>
             </li>
           </ul>
@@ -127,7 +127,7 @@
         </div>
       </form>
       <section class="address">
-        <div class="address__wrapper">
+        <div class="address__wrapper wrapper">
           <h2 class="visually-hidden">Наш адрес</h2>
           <div class="address__content address__content--form">
             <h3 class="address__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
