@@ -9,9 +9,8 @@
     margin-bottom: 479px;
   }
   @include desktop {
-    padding: 77px 55% 149px 13.2%;
-    margin: 0;
-    margin-bottom: 119px;
+    margin-bottom: 251px;
+    padding: 76px 698px 16px 108px;
     &::after {
       content: "";
       position: absolute;
@@ -20,7 +19,7 @@
       top: 0;
       right: 0;
       height: 694px;
-      width: 720px;
+      width: 50%;
       z-index: 0;
     }
     &::before {
@@ -29,7 +28,7 @@
       top: 0;
       right: 0;
       height: 694px;
-      width: 720px;
+      width: 50%;
       background-color: #68b738;
       opacity: 0.85;
       z-index: 1;
@@ -92,7 +91,7 @@
       background-image: url(../img/index-bottle.png);
       width: 552px;
       height: 499px;
-      left: 80%;
+      left: 78.4%;
       top: -36%;
     }
   }
