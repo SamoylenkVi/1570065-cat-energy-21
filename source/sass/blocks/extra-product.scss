@@ -8,13 +8,14 @@
       @include border-tablet($none-padding, $none-padding);
     }
     @include desktop {
-      @include border-tablet($special-tablet-padding, $none-padding)
+      @include border-tablet($special-tablet-padding, $special-desctop-padding)
     }
   }
   &::after {
     @include desktop {
-      @include border($none-padding, $after-catolog-padding);
+      @include border($special-desctop-padding,$none-padding);
       top:24px;
+      width: 70px;
     }
   }
 }

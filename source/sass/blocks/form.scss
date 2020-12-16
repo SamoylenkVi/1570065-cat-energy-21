@@ -21,13 +21,14 @@
       @include border-tablet(-$tablet-padding, -$tablet-padding);
     }
     @include desktop {
-      @include border-tablet($none-padding, -$desctop-padding);
+      @include border-tablet($special-tablet-padding, $special-form-padding)
     }
   }
   &::after {
     @include desktop {
-    @include border(-$desctop-padding, $after-desctop-padding );
-    top: 24px;
+      @include border($special-form-padding,$none-padding);
+      top:24px;
+      width: 70px;
     }
   }
 }

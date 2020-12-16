@@ -6,6 +6,8 @@
     padding-right: $tablet-padding;
   }
   @include desktop{
+    width: 1280px;
+    margin: 0 auto;
     padding-left: $desctop-padding;
     padding-right: $desctop-padding;
   }
