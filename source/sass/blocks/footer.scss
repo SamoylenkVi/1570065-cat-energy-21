@@ -13,20 +13,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100px;
+  min-height: 94px;
+  border-bottom: 1px solid $special-border-grey;
   &--form{
     min-height: 93px;
+  }
+  @include tablet{
+    border: none;
   }
 }
 .footer__copyright {
   min-height: 79px;
-  padding-top: 10px;
+  padding-top: 20px;
   @include tablet{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding-top: 0;
   }
 }
 .foter__copyright-link {

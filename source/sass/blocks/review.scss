@@ -1,13 +1,19 @@
+.review{
+  @include desktop{
+  background-image: linear-gradient(#ffffff 29.6%, #f2f2f2 25%);
+}
+}
 .review__wrapper {
   background-color: $basic-grey;
   @include tablet{
-    background-color: $basic-white;
+    background-image: linear-gradient($basic-white 57.5%, $basic-grey 32.5%);
   }
   @include desktop{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 18px;
-  }
+    padding-bottom: 18px;
+    background-image: linear-gradient(#ffffff 29.6%, #f2f2f2 25%);
+}
 }
 
 .review__title {
@@ -27,7 +33,7 @@
   margin: 0;
   padding: 16px 0 25px;
   @include tablet {
-    padding: 16px 4% 51px 0;
+    padding: 16px 28px 51px 0;
   }
   @include desktop{
     padding: 16px 171px 67px 0;
@@ -52,7 +58,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 31px;
+  gap: 33px;
   margin-bottom: 3px;
   @include tablet {
     gap: 43px;
@@ -91,9 +97,9 @@
   margin: 0;
   text-transform: lowercase;
   margin-top: -8px;
-  background-color: #f2f2f2;
+  background-color: $basic-grey;
   width: 69%;
-  padding: 0 5%;
+  padding: 0 6px;
   @include tablet {
     font-size: $base-font-size;
     line-height: $text-line-height;
@@ -101,6 +107,9 @@
     padding: 0 5%;
     margin-top: -9px;
     background-color:$basic-white;
+  }
+  @include desktop{
+    background-color: $basic-grey;
   }
 }
 .review__total {
@@ -160,17 +169,6 @@
       background-position: 0% -23%, 100% -36%;
       z-index: 1;
     }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 42.5%;
-      height: 63%;
-      right: 0;
-      width: 100%;
-      background-color:$basic-grey;
-      opacity: 0.85;
-      z-index: 0;
-    }
   }
   @include desktop{
     min-height: 532px;
@@ -183,7 +181,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
   min-height: 40px;
-  padding: 5% 9% 13% 10%;
+  padding: 14px 24px 37px 27px;
   align-items: center;
   @include tablet{
     padding: 23px 6.5% 69px;

@@ -1,6 +1,67 @@
-.navigation__toggle {
+.navigation__toggle{
+  @include remove-indentation;
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  z-index: 2;
+  height: 34px;
+  width: 45px;
+  background-color: transparent;
+  border: 0;
+
+  cursor: pointer;
   @include tablet {
     display: none;
+  }
+}
+.navigation--closed .navigation__toggle-content{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right:50%;
+  transform: translateX(50%);
+  width: 36px;
+  height: 2px;
+  background-color: $basic-black;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right:50%;
+    transform: translate(50%, -10px);
+    width: 36px;
+    height: 2px;
+    background-color: $basic-black;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right:50%;
+    transform: translate(50%, 10px);
+    width: 36px;
+    height: 2px;
+    background-color: $basic-black;
+  }
+}
+.navigation--opend .navigation__toggle-content{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right:50%;
+  transform: translateX(50%) rotate(45deg);
+  width: 25px;
+  height: 2px;
+  background-color: $basic-black;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right:50%;
+    transform: translate(45%)  rotate(90deg);
+    width: 25px;
+    height: 2px;
+    background-color: $basic-black;
   }
 }
 .navigation__list {
@@ -13,10 +74,10 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
-    padding-top:21px
+    padding-top:18px
   }
-
 }
+
 .navigation__link {
   @include font-options($family-oswald, $header-font-size, $header-line-height, $bold-font-weight, $basic-black);
   @include link-default-remove($basic-black);
@@ -26,6 +87,7 @@
   display: grid;
   align-items: center;
   padding: 5px 15px;
+  border-top: 1px solid $mobile-border-grey;
   @include tablet {
     min-height: auto;
     padding: 0;
@@ -36,11 +98,22 @@
     align-items: flex-end;
     justify-content: flex-end;
     margin-left: 36px;
-    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border: none;
   }
   @include desktop {
     font-size:$header-font-size;
     line-height: $special-tablet-link;
       z-index: 1;
   }
+  &--active{
+    @include tablet{
+    border-bottom: 1px solid $basic-green;
+    }
+  }
+}
+.navigation__item--index .navigation__link--active{
+@include desktop{
+  border-bottom: 1px solid $basic-white;
+}
 }
