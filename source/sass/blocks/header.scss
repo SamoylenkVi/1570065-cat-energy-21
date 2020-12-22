@@ -2,28 +2,46 @@
   display: flex;
   flex-direction: column;
   padding-top: 13px;
+
   @include tablet {
     min-height: 88px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-top: 20px;
   }
-  @include desktop{
+
+  @include desktop {
     min-height: 147px;
     position: relative;
     z-index: 2;
+
+    padding-top: 24px;
   }
 }
+
 .header__logo {
   min-height: 35px;
   padding-bottom: 12px;
+
   @include tablet {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin: 0;
     padding: 0;
+  }
+}
 
+.header__logo img {
+  @include tablet {
+    width: 174px;
+    height: 52px;
+  }
+
+  @include desktop {
+    width: 202px;
+    height: 59px;
   }
 }
