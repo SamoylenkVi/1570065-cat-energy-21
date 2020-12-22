@@ -1,11 +1,13 @@
 .wrapper {
   padding-left: $mobile-padding;
   padding-right: $mobile-padding;
+
   @include tablet {
     padding-left: $tablet-padding;
     padding-right: $tablet-padding;
   }
-  @include desktop{
+
+  @include desktop {
     width: 1280px;
     margin: 0 auto;
     padding-left: $desctop-padding;

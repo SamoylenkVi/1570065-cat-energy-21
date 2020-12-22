@@ -1,44 +1,53 @@
-.review{
-  @include desktop{
-  background-image: linear-gradient(#ffffff 29.6%, #f2f2f2 25%);
+.review {
+  @include desktop {
+    background-image: linear-gradient(#ffffff 29.6%, #f2f2f2 25%);
+  }
 }
-}
+
 .review__wrapper {
   background-color: $basic-grey;
-  @include tablet{
+
+  @include tablet {
     background-image: linear-gradient($basic-white 57.5%, $basic-grey 32.5%);
   }
-  @include desktop{
+
+  @include desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 18px;
     background-image: linear-gradient(#ffffff 29.6%, #f2f2f2 25%);
-}
+  }
 }
 
 .review__title {
   @include font-options($family-oswald, $heading-font-size, $heading-line-height, $normal-font-weight, $basic-black);
   margin: 0;
   padding: 28px 0 16px;
+
   @include tablet {
     font-size: $heading-tablet-size;
     line-height: $heading-tablet-line;
     padding: 44px 0 50px;
   }
-  @include desktop{
-    padding: 60px 29px 130px 0px;
+
+  @include desktop {
+    padding: 60px 29px 130px 0;
   }
 }
+
 .review__text {
   margin: 0;
   padding: 16px 0 25px;
+
   @include tablet {
     padding: 16px 28px 51px 0;
   }
-  @include desktop{
+
+  @include desktop {
     padding: 16px 171px 67px 0;
   }
 }
+
 .review__statistics {
   @include tablet {
     display: flex;
@@ -47,12 +56,14 @@
     align-items: flex-start;
     padding-bottom: 39px;
   }
-  @include desktop{
+
+  @include desktop {
     flex-direction: column;
     align-items: start;
     padding-bottom: 38px;
   }
 }
+
 .review__statistics-content {
   flex-shrink: 0;
   display: grid;
@@ -60,19 +71,23 @@
   align-items: center;
   gap: 33px;
   margin-bottom: 3px;
+
   @include tablet {
     gap: 43px;
   }
-  @include desktop{
+
+  @include desktop {
     padding-bottom: 39px;
   }
 }
+
 .review__statistics-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: stretch;
 }
+
 .review__statistics-title {
   @include font-options($family-oswald, $subtitle-font-size, $number-line-height, $normal-font-weight, $basic-black);
   min-height: 56px;
@@ -82,6 +97,7 @@
   border: 1px solid $border-grey;
   border-radius: 3px;
   padding: 7px 10px 10px;
+
   @include tablet {
     font-size: $tablet-statistics-size;
     line-height: $tablet-statistics-line;
@@ -100,50 +116,59 @@
   background-color: $basic-grey;
   width: 69%;
   padding: 0 6px;
+
   @include tablet {
     font-size: $base-font-size;
     line-height: $text-line-height;
     width: 89%;
     padding: 0 5%;
     margin-top: -9px;
-    background-color:$basic-white;
+    background-color: $basic-white;
   }
-  @include desktop{
+
+  @include desktop {
     background-color: $basic-grey;
   }
 }
+
 .review__total {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
   @include tablet {
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
     padding: 13px 0 13px;
   }
-  @include desktop{
+
+  @include desktop {
     flex-direction: row;
     justify-content: space-around;
   }
 }
+
 .review__total-title,
 .review__total-subtitle {
   @include font-options($family-oswald, $base-font-size, $header-line-height, $normal-font-weight, $basic-black);
   text-transform: uppercase;
   margin: 0;
   padding: 15px 1px;
+
   @include tablet {
     font-size: $header-font-size;
     line-height: $header-line-height;
     padding: 0;
     padding-bottom: 8px;
   }
-  @include desktop{
+
+  @include desktop {
     padding-right: 63px;
   }
 }
+
 .review__image {
   display: grid;
   grid-template-columns: 1fr;
@@ -155,53 +180,63 @@
     background-repeat: no-repeat;
     background-position: 62% 72%;
   }
+
   &--after {
     background-image: url("../img/cat-review-after.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
-  @include tablet{
+
+  @include tablet {
     min-height: 542px;
     position: relative;
+
     &--before {
-      background-image: url(../img/before-tablet.png), url(../img/after-tablet.png);
+      background-image: url("../img/before-tablet.png"), url("../img/after-tablet.png");
       background-repeat: no-repeat;
-      background-position: 0% -23%, 100% -36%;
+      background-position: 0 -23%, 100% -36%;
       z-index: 1;
     }
   }
-  @include desktop{
+
+  @include desktop {
     min-height: 532px;
-  &--before{
-    background-position: -22% 18%, 112% 12%;
+
+    &--before {
+      background-position: -22% 18%, 112% 12%;
+    }
   }
 }
-}
+
 .review__fiter {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
   min-height: 40px;
   padding: 14px 24px 37px 27px;
   align-items: center;
-  @include tablet{
+
+  @include tablet {
     padding: 23px 6.5% 69px;
     background-color: $basic-grey;
   }
-  @include desktop{
+
+  @include desktop {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 19px 1px 19px 40px;
   }
 }
+
 .review__filter-text {
   @include font-options($family-oswald, $form-font-size, $header-line-height, $normal-font-weight, $basic-black);
   margin: 0;
   text-transform: uppercase;
   justify-self: center;
-  @include tablet{
-    font-size:$header-font-size;
-    line-height:$special-tablet-link;
+
+  @include tablet {
+    font-size: $header-font-size;
+    line-height: $special-tablet-link;
   }
 }
 
@@ -215,6 +250,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: 1px 5px;
+
   @include tablet {
     width: 428px;
     height: 6px;
@@ -230,6 +266,7 @@
   background-color: $basic-green;
   border-radius: 20px;
   margin: 0;
+
   @include tablet {
     width: 33px;
     height: 33px;

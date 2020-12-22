@@ -5,29 +5,40 @@
 .page__body {
   @include font-options($family-arial, $base-font-size, $base-line-height, $normal-font-weight, $special_dark-grey);
   max-width: 1440px;
+
   @include tablet {
     font-size: $form-font-size;
-    line-height:$number-line-height;
+    line-height: $number-line-height;
   }
+
   @include desktop {
     position: relative;
     margin: 0 auto;
   }
 }
+
 .page__title {
   text-align: left;
   margin: 0;
   padding: 27px 37px 25px 19px;
+
   @include tablet {
     padding: 53px 37px 48px 68px;
   }
+
   @include desktop {
     padding: 41px 54px 48px 110px;
   }
-  &--catalog{
-padding-bottom: 40px;
-@include tablet{
-  padding-left: 30px;
-}
+
+  &--catalog {
+    padding-bottom: 40px;
+
+    @include tablet {
+      padding-bottom: 91px;
+    }
+
+    @include desktop {
+      padding-bottom: 85px;
+    }
   }
 }

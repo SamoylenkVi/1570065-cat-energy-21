@@ -6,6 +6,7 @@
 
 .form__box--base {
   border-bottom: 1px solid $special-border-grey;
+
   @include tablet {
     border: none;
   }
@@ -13,21 +14,26 @@
 
 .form__box--additional {
   position: relative;
+
   &::before {
     @include border($none-padding, -$mobile-padding);
     top: 15px;
+
     @include tablet {
       top: 24px;
+
       @include border-tablet(-$tablet-padding, -$tablet-padding);
     }
+
     @include desktop {
-      @include border-tablet($special-tablet-padding, $special-form-padding)
+      @include border-tablet($special-tablet-padding, $special-form-padding);
     }
   }
+
   &::after {
     @include desktop {
       @include border($special-form-padding,$none-padding);
-      top:24px;
+      top: 24px;
       width: 70px;
     }
   }
@@ -39,22 +45,27 @@
   margin: 0;
   padding: 11px 30px 39px 0;
   text-align: left;
+
   @include tablet {
     font-size: $header-font-size;
     line-height: $tablet-statistics-size;
     padding: 7px 40px 65px;
   }
+
   @include desktop {
     padding: 8px 80px 13px 0;
   }
+
   @include desktop {
     padding: 8px 80px 64px 0;
   }
 }
+
 .form__item-name {
   @include font-options($family-oswald, $form-font-size, $base-line-height, $normal-font-weight, $special_dark-grey);
   text-transform: uppercase;
   flex-shrink: 0;
+
   @include tablet {
     font-size: $header-font-size;
     line-height: $special-tablet-link;
@@ -76,61 +87,71 @@
     font-size: $header-font-size;
     line-height: $special-tablet-link;
   }
+
   &::placeholder {
     @include font-options($family-oswald, $form-font-size, $base-line-height, $normal-font-weight, $special_dark-grey);
     text-transform: uppercase;
+
     @include tablet {
       font-size: $header-font-size;
       line-height: $special-tablet-link;
     }
   }
 }
+
 .form__title {
   font-size: $subtitle-font-size;
   line-height: $form-line-height;
   text-align: left;
   padding-bottom: 36px;
   padding-right: 21px;
-  background-color: #fff;
+  background-color: $basic-white;
 
   @include tablet {
     font-size: $heading-font-size;
     line-height: $special-heading-line-height;
     padding: 1px 42px 75px 39px;
+
     br {
       display: none;
     }
   }
+
   @include desktop {
     padding-left: 1px;
   }
 }
+
 .form__content {
   @include desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 78px;
-  }
-  @include desktop {
     padding-bottom: 34px;
   }
 }
+
 .form__information-cat {
   @include remove-indentation;
 }
+
 .form__item-name--information {
   margin-right: 14px;
   padding-top: 14px;
+
   @include tablet {
     padding-top: 11px;
   }
 }
+
 .form__entry-field--information {
   padding: 10px 15px 4px;
+
   @include tablet {
     padding: 10px 21px 4px;
   }
 }
+
 .form__information-list {
   @include list-default-remove;
   display: flex;
@@ -142,45 +163,56 @@
   margin: 0;
   padding-bottom: 10px;
 }
+
 .form__information-item {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
   padding-bottom: 13px;
+
   @include tablet {
-    padding: 0px 36px 21px 40px;
+    padding: 0 36px 21px 40px;
   }
+
   @include desktop {
     padding: 0 0 21px 2px;
   }
 }
+
 .form__goal {
   padding: 28px 12px 24px 45px;
   margin: 0;
+
   @include tablet {
     padding: 37px 36px 75px 40px;
   }
+
   @include desktop {
     padding: 0;
   }
 }
+
 .form__goal-list,
 .form__extra-list {
   @include list-default-remove;
   @include remove-indentation;
+
   @include tablet {
     border: 1px solid $border-grey;
     padding: 30px 88px 4px 88px;
   }
 }
+
 .form__goal-item {
   padding-bottom: 23px;
 }
+
 .form__information-list--person {
   @include tablet {
     padding-bottom: 43px;
   }
+
   @include desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -188,55 +220,70 @@
     padding-bottom: 47px;
   }
 }
+
 .form__item-name--person {
   margin-right: 11px;
   padding-top: 10px;
+
   @include tablet {
     margin-right: 18px;
   }
+
   @include desktop {
     padding-top: 13px;
     margin-right: 22px;
   }
 }
+
 .form__tel {
   @include tablet {
     margin-right: 15px;
   }
 }
+
 .form__entry-field--person {
   padding: 5px 38px 3px 14px;
+
   @include tablet {
     padding: 8px 38px 3px 22px;
   }
+
   @include desktop {
     padding: 10px 43px 3px 15px;
   }
 }
+
 .form__tel-field {
   padding: 8px 35px 3px 14px;
+
   @include tablet {
     padding: 8px 38px 3px 18px;
   }
 }
+
 .form__information-item--comment {
   padding-bottom: 24px;
+
   @include tablet {
     padding-bottom: 64px;
   }
 }
+
 .form__entry-field--comment {
   resize: none;
   min-height: 151px;
   padding: 10px 13px;
+
   @include tablet {
     min-height: 175px;
     padding: 11px 17px;
   }
 }
+
 .form__title--extra {
   padding-bottom: 34px;
 }
+
 .form__extra-list {
   display: flex;
   flex-direction: column;
@@ -244,6 +291,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   padding-bottom: 23px;
+
   @include tablet {
     border: none;
     display: grid;
@@ -252,6 +300,7 @@
     grid-row-gap: 8px;
     padding: 1px 8px 50px 9px;
   }
+
   @include desktop {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: none;
@@ -260,40 +309,50 @@
     padding-bottom: 59px;
   }
 }
+
 .form__extra-item {
   padding: 5px 45px 17px;
+
   @include tablet {
     padding: 28px 33px 7px 89px;
   }
+
   @include desktop {
     padding: 31px 14px 7px 60px;
   }
 }
+
 .form__item-name--radio {
   color: $special_dark-grey-2;
 }
+
 .form__button-wrapper {
   display: flex;
   flex-direction: column;
+
   @include tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-left: 41px;
     padding-bottom: 72px;
   }
+
   @include desktop {
     padding-left: 0;
     padding-bottom: 82px;
   }
 }
+
 .form__button {
   display: inline-block;
   min-height: 40px;
   margin-bottom: 21px;
+
   @include font-options($family-oswald, $form-font-size, $header-line-height, $normal-font-weight, $basic-white);
   text-transform: uppercase;
   background-color: $basic-green;
   border: none;
+
   @include tablet {
     font-size: $header-font-size;
     line-height: $special-tablet-link;
@@ -301,6 +360,7 @@
     width: 85%;
     margin: 0;
   }
+
   @include desktop {
     width: 93%;
   }
@@ -311,12 +371,14 @@
   margin: 0;
   text-align: center;
   padding-bottom: 39px;
+
   @include tablet {
     text-align: start;
     font-size: $form-font-size;
     line-height: $special-line-height;
     padding: 16px 9px;
   }
+
   @include desktop {
     padding: 16px 41px;
   }

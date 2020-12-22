@@ -6,10 +6,12 @@
   flex-wrap: wrap;
   min-height: 63px;
   border-bottom: 1px solid $special-border-grey;
-  @include tablet{
+
+  @include tablet {
     border: none;
   }
 }
+
 .social__list {
   @include list-default-remove;
   @include remove-indentation;
@@ -20,12 +22,15 @@
   flex-wrap: wrap;
   min-height: 22px;
 }
-.social__item{
+
+.social__item {
   margin-right: 13px;
-  &:last-child{
+
+  &:last-child {
     margin-right: 0;
   }
 }
+
 .social__item a {
   display: flex;
   justify-content: center;
