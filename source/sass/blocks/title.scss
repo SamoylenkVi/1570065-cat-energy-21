@@ -1,7 +1,8 @@
 .title {
   @include font-options($family-oswald, $heading-font-size, $special-heading-line-height, $normal-font-weight, $basic-black);
-  @include tablet{
-   font-size:$heading-tablet-size;
-   line-height:$heading-tablet-line;
+
+  @include tablet {
+    font-size: $heading-tablet-size;
+    line-height: $heading-tablet-line;
   }
 }

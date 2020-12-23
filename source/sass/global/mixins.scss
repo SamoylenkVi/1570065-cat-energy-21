@@ -5,40 +5,53 @@
   font-weight: $weight;
   color: $color;
 }
+
 @mixin remove-indentation {
   padding: 0;
   margin: 0;
 }
-@mixin list-default-remove{
+
+@mixin list-default-remove {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 @mixin link-default-remove($color: inherit) {
   text-decoration: none;
   outline: none;
   color: $color;
 }
+
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;
+  }
 }
-}
+
 @mixin desktop {
   @media (min-width: $desktop-width) {
     @content;
+  }
 }
+
+@mixin retina {
+  @media (min-resolution: 2dppx) {
+    @content;
+  }
 }
-@mixin border ($left, $right) {
-    position: absolute;
-    content: "";
-    height: 2px;
-    background-color: $basic-green;
-    left: $left;
-    right: $right;
-    z-index: -1;
+
+@mixin border($left, $right) {
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: $basic-green;
+  left: $left;
+  right: $right;
+  z-index: -1;
 }
+
 @mixin border-tablet($left, $right) {
-      left: $left;
-      right: $right;
+  left: $left;
+  right: $right;
 }

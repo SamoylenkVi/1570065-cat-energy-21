@@ -4,32 +4,40 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 19px;
+
   @include tablet {
     gap: 29px;
   }
-  @include desktop{
+
+  @include desktop {
     grid-template-columns: 1fr 1fr;
     gap: 79px;
   }
 }
+
 .nutrition-program__item {
   padding: 9px 20px 20px;
   background-color: $basic-grey;
-  @include tablet{
- padding: 75px 269px 23px 53px;
+
+  @include tablet {
+    padding: 75px 269px 23px 53px;
+  }
+
+  @include desktop {
+    padding: 77px 56px 1px 52px;
+  }
 }
-@include desktop{
-  padding: 77px 56px 1px 52px
-}
-}
-.nutrition-program__item--after{
+
+.nutrition-program__item--after {
   @include tablet {
     padding: 75px 44% 23px 7.5%;
   }
-  @include desktop{
-    padding: 77px 56px 1px 52px
+
+  @include desktop {
+    padding: 77px 56px 1px 52px;
   }
 }
+
 .nutrition-program__program {
   background-color: $basic-grey;
 }
@@ -38,30 +46,36 @@
   @include font-options($family-oswald, $subtitle-font-size, $subtitle-line-height, $normal-font-weight, $basic-black);
   text-transform: uppercase;
   margin: 0;
-  padding: 20px 22px 30px 72px;
+  padding: 20px 22px 30 72px;
+
   @include tablet {
     font-size: $heading-font-size;
     line-height: $special-heading-line-height;
     padding: 0;
     padding-bottom: 27px;
   }
-  @include desktop{
-    padding: 0px 93px 75px 162px;
+
+  @include desktop {
+    padding: 0 93px 75px 162px;
   }
 }
+
 .nutrition-program__content {
   margin: 0;
   padding-bottom: 22px;
+
   @include tablet {
     font-size: $form-font-size;
     line-height: $number-line-height;
     padding: 0;
     padding-bottom: 52px;
   }
-  @include desktop{
+
+  @include desktop {
     padding-bottom: 27px;
   }
 }
+
 .nutrition-program__link {
   @include font-options($family-oswald, $form-font-size, $special-line-height, $normal-font-weight, $basic-black);
   @include link-default-remove($basic-black);
@@ -69,8 +83,9 @@
   text-transform: uppercase;
   min-height: 24px;
   display: inline-block;
-  padding: 19px 51px 0px 0px;
+  padding: 19px 51px 0 0;
   width: 100%;
+
   @include tablet {
     font-size: $header-font-size;
     line-height: $special-tablet-link;
@@ -78,7 +93,8 @@
     padding-bottom: 35px;
     border: none;
   }
-  @include desktop{
+
+  @include desktop {
     padding-bottom: 55px;
   }
 }

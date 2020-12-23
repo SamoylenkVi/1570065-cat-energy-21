@@ -2,93 +2,249 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 22px;
+  flex-basis: 50%;
+
+  &--more {
+    padding-bottom: 32px;
+  }
+
   @include tablet {
-    padding-bottom: 24px;
+    padding-bottom: 40px;
+    background-image: linear-gradient($basic-white 14%, $basic-grey 14%);
+
+    &--more {
+      margin-top: 76px;
+      justify-content: center;
+      background-image: none;
+      border: 2px solid $basic-grey;
+      padding-top: 135px;
+      padding-bottom: 36px;
+    }
+  }
+
+  @include desktop {
+    background-image: linear-gradient(#ffffff 16%, #f2f2f2 16%);
+
+    &--more {
+      margin-top: 78px;
+      background-image: none;
+    }
   }
 }
+
 .product__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  padding-top: 20px;
+
+  &--more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 79px;
+  }
+
   @include tablet {
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+
+    &--more {
+      justify-content: space-around;
+    }
   }
 }
+
+.product__picture-wrapper {
+  min-height: 112px;
+
+  &--more {
+    min-height: 78px;
+  }
+
+  @include tablet {
+    min-height: 214px;
+  }
+
+  @include desktop {
+    min-height: 209px;
+  }
+}
+
+.product__picture {
+  height: 112px;
+
+  @include tablet {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .product__content {
-  flex-basis: 50%;
+  min-width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 23px;
+
+  &--more {
+    position: relative;
+    padding-bottom: 31px;
+
+    ::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 1px;
+      background-color: $basic-black;
+      top: -37px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    ::after {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 1px;
+      background-color: $basic-black;
+      top: -37px;
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+    }
+  }
+
   @include tablet {
     justify-content: flex-end;
     align-items: center;
     padding-bottom: 34px;
+
+    &--more {
+      padding-bottom: 58px;
+
+      ::before {
+        width: 60px;
+        top: -55px;
+      }
+
+      ::after {
+        width: 60px;
+        top: -55px;
+      }
+    }
   }
 }
+
 .product__content-list {
   min-width: 142px;
   min-height: 44px;
   border-collapse: collapse;
+
   @include tablet {
     min-width: 252px;
   }
+
   @include desktop {
     min-width: 173px;
   }
 }
+
 .product__content-item {
   @include tablet {
     border-bottom: 1px solid black;
   }
 }
+
 .product__title {
-  @include font-options(
-    $family-oswald,
-    $form-font-size,
-    $header-line-height,
-    $normal-font-weight,
-    $special_dark-grey-2
-  );
+  @include font-options($family-oswald, $form-font-size, $header-line-height, $normal-font-weight, $special_dark-grey-2);
   text-transform: uppercase;
   margin: 0;
-  padding: 20px 43px 14px 2px;
+  padding: 2px 43px 14px 0;
+
+  br {
+    display: none;
+  }
+
+  &--more {
+    text-align: center;
+    padding: 2px 1px 2px 1px;
+  }
+
   @include tablet {
     font-size: $header-font-size;
-    line-height: $number-line-height;
+    line-height: $special-tablet;
     text-align: center;
-    padding: 19px 89px 15px 93px;
+    padding: 24px 90px 18px 93px;
+
+    br {
+      display: inline;
+    }
+
+    &--more {
+      padding-top: 26px;
+    }
   }
+
   @include desktop {
-    padding: 0;
+    padding: 34px 8px 19.5px;
+
+    &--more {
+      padding: 29px 15px 17px;
+    }
   }
 }
+
 .product__text {
   @include font-options($family-arial, $min-font-size, $special-line-height, $normal-font-weight, $special_dark-grey);
   padding: 0;
-  padding-left: 2px;
+
+  br {
+    display: none;
+  }
+
   &--description {
     text-align: right;
   }
+
+  &--more {
+    margin: 0;
+    padding-top: 6px;
+  }
+
   @include tablet {
     font-size: $form-font-size;
     min-height: 30px;
     padding: 6px 2px 8.9px 1px;
-  }
-}
-.product__link {
-  width: 280px;
-  @include tablet {
-    width: 248px;
-    @include desktop {
-      width: 148px;
+
+    &--more {
+      text-align: center;
+      padding: 8px 0 31px 0;
+
+      br {
+        display: block;
+      }
     }
   }
+}
+
+.product__link {
+  width: 280px;
+
+  @include tablet {
+    width: 248px;
+
+    @include desktop {
+      width: 168px;
+    }
+  }
+
   &--more {
-    min-height: 60px;
+    min-height: 40px;
     color: $special_dark-grey;
     background-color: $basic-grey;
   }
 }
-

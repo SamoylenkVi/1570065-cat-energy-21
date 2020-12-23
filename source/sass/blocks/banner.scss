@@ -1,5 +1,6 @@
 .banner__wrapper {
   padding: 0;
+
   @include tablet {
     display: flex;
     flex-direction: column;
@@ -8,20 +9,28 @@
     padding: 53px 112px 46px;
     margin-bottom: 479px;
   }
+
   @include desktop {
     margin-bottom: 251px;
     padding: 76px 698px 16px 108px;
+
     &::after {
       content: "";
       position: absolute;
-      background-image: url(../img/index-background-desktop.jpg);
+      background-image: url("../img/banner-cat-desktop.jpg");
       background-repeat: no-repeat;
       top: 0;
       right: 0;
       height: 694px;
       width: 50%;
       z-index: 0;
+
+      @include retina {
+        background-image: url("../img/banner-cat-desktop@2x.jpg");
+        background-size: contain;
+      }
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -35,9 +44,9 @@
     }
   }
 }
+
 .banner__content {
-  background-image: url(../img/banner-cat.jpg);
-  background-repeat: no-repeat;
+  background-image: url("../img/banner-cat.jpg");
   padding: 27px 0 153px;
   margin-bottom: 138px;
   position: relative;
@@ -45,17 +54,28 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
+
+  @include retina {
+    background-image: url("../img/banner-cat@2x.jpg");
+  }
+
   &::after {
     content: "";
     position: absolute;
-    background-image: url(../img/banner-bottle.png);
+    background-image: url("../img/banner-bottle.png");
     background-repeat: no-repeat;
     background-position: center;
     left: 0;
     right: 0;
     bottom: -135px;
     height: 270px;
+    background-size: contain;
+
+    @include retina {
+      background-image: url("../img/banner-bottle@2x.png");
+    }
   }
+
   &::before {
     content: "";
     position: absolute;
@@ -67,46 +87,57 @@
     opacity: 0.85;
     z-index: -1;
   }
+
   @include tablet {
     background-image: none;
     padding: 0 0.5%;
     margin: 0;
+
     &::before {
       background-color: $basic-white;
     }
+
     &::after {
-      background-image: url(../img/bottle-tablet.png);
+      background-image: url("../img/bottle-tablet.png");
       bottom: -579px;
       left: -15%;
       z-index: -1;
       height: 609px;
       width: 709px;
+
+      @include retina {
+        background-image: url("../img/bottle-tablet@2x.png");
+        background-size: contain;
+      }
     }
   }
+
   @include desktop {
     position: relative;
     padding: 0;
     z-index: 2;
+
     &::after {
-      background-image: url(../img/index-bottle.png);
+      background-image: url("../img/desktop-bottle.png");
       width: 552px;
       height: 499px;
       left: 78.4%;
       top: -36%;
+
+      @include retina {
+        background-image: url("../img/desktop-bottle@2x.png");
+        background-size: contain;
+      }
     }
   }
 }
+
 .banner__title {
-  @include font-options(
-    $family-oswald,
-    $heading-font-size,
-    $special-heading-line-height,
-    $normal-font-weight,
-    $basic-white
-  );
+  @include font-options($family-oswald, $heading-font-size, $special-heading-line-height, $normal-font-weight, $basic-white);
   margin: 0;
   text-align: center;
   padding-bottom: 23px;
+
   @include tablet {
     color: $basic-black;
     font-size: $heading-tablet-size;
@@ -114,16 +145,19 @@
     text-align: left;
     padding-bottom: 42px;
   }
+
   @include desktop {
     padding-bottom: 39px;
   }
 }
+
 .banner__slogan {
   @include font-options($family-oswald, $base-font-size, $special-line-height, $normal-font-weight, $basic-white);
   margin: 0;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 11px;
+
   @include tablet {
     color: $basic-black;
     font-size: $header-font-size;
@@ -132,10 +166,12 @@
     margin: 0;
     padding-bottom: 49px;
   }
+
   @include desktop {
     padding-bottom: 52px;
   }
 }
+
 .banner__link {
   @include font-options($family-oswald, $base-font-size, $base-line-height, $normal-font-weight, $basic-white);
   margin: 0 20px 22px;
