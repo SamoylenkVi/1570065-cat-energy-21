@@ -3,7 +3,7 @@
   @include remove-indentation;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 19px;
+  gap: 21px;
 
   @include tablet {
     gap: 29px;
@@ -16,24 +16,40 @@
 }
 
 .nutrition-program__item {
+  background-image: url("../img/cat_slim.svg");
+  background-repeat: no-repeat;
+  background-size: 50px 53px;
+  background-position: 22px 21px;
   padding: 9px 20px 20px;
   background-color: $basic-grey;
 
   @include tablet {
-    padding: 75px 269px 23px 53px;
+    background-size: 200px 211px;
+    background-position: 88% 79px;
+    padding: 75px 38% 23px 53px;
   }
 
   @include desktop {
+    background-size: 100px 106px;
+    background-position: 53px 41px;
     padding: 77px 56px 1px 52px;
   }
 }
 
 .nutrition-program__item--after {
+  background-image: url("../img/cat_pro.svg");
+  background-size: 67px 50px;
+  background-position: 13px 24px;
+
   @include tablet {
+    background-size: 268px 200px;
+    background-position: 93% 90px;
     padding: 75px 44% 23px 7.5%;
   }
 
   @include desktop {
+    background-size: 134px 100px;
+    background-position: 33px 47px;
     padding: 77px 56px 1px 52px;
   }
 }
@@ -46,7 +62,7 @@
   @include font-options($family-oswald, $subtitle-font-size, $subtitle-line-height, $normal-font-weight, $basic-black);
   text-transform: uppercase;
   margin: 0;
-  padding: 20px 22px 30 72px;
+  padding: 20px 22px 30px 72px;
 
   @include tablet {
     font-size: $heading-font-size;
@@ -82,9 +98,11 @@
   border-top: 1px solid $special-border-grey;
   text-transform: uppercase;
   min-height: 24px;
-  display: inline-block;
   padding: 19px 51px 0 0;
   width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   @include tablet {
     font-size: $header-font-size;
@@ -97,4 +115,22 @@
   @include desktop {
     padding-bottom: 55px;
   }
+}
+
+.nutrition-program__link-text {
+  margin: 0;
+  margin-right: 15px;
+
+  @include tablet {
+    margin-right: 24px;
+  }
+
+  @include desktop {
+    margin-right: 28px;
+  }
+}
+
+.nutrition-program__arrow {
+  width: 32px;
+  height: 12px;
 }

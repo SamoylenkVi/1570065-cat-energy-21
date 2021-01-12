@@ -9,7 +9,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 11px;
   }
 
   @include desktop {
@@ -25,6 +25,14 @@
   min-height: 35px;
   padding-bottom: 12px;
 
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+
   @include tablet {
     display: flex;
     justify-content: flex-start;
@@ -34,14 +42,28 @@
   }
 }
 
-.header__logo img {
+.header__logo-mobile {
   @include tablet {
-    width: 174px;
-    height: 52px;
+    display: none;
+  }
+}
+
+.header__logo-tablet {
+  display: none;
+
+  @include tablet {
+    display: block;
   }
 
   @include desktop {
-    width: 202px;
-    height: 59px;
+    display: none;
+  }
+}
+
+.header__logo-desktop {
+  display: none;
+
+  @include desktop {
+    display: block;
   }
 }

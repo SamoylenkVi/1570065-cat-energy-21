@@ -136,7 +136,7 @@
   @include font-options($family-oswald, $heading-font-size, $special-heading-line-height, $normal-font-weight, $basic-white);
   margin: 0;
   text-align: center;
-  padding-bottom: 23px;
+  padding-bottom: 25px;
 
   @include tablet {
     color: $basic-black;

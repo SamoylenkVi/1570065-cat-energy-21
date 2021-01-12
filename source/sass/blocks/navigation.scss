@@ -80,7 +80,11 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
-    padding-top: 9px;
+    padding-top: 20px;
+  }
+
+  @include desktop {
+    padding-top: 4px;
   }
 }
 

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: space-around;
 
   @include tablet {
     min-height: 146px;
@@ -12,7 +13,7 @@
   }
 
   @include desktop {
-    padding-bottom: 11px;
+    padding-bottom: 15px;
   }
 }
 
@@ -20,7 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 94px;
+  min-height: 91px;
   border-bottom: 1px solid $special-border-grey;
 
   &--form {
@@ -65,5 +66,15 @@
 
   @include tablet {
     padding: 0 24px 4px 0;
+  }
+}
+
+.footer__logo {
+  color: #666666;
+
+  @include tablet {
+    &:hover {
+      color: $basic-green;
+    }
   }
 }
