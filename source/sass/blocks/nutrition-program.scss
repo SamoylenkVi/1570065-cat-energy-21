@@ -44,7 +44,7 @@
   @include tablet {
     background-size: 268px 200px;
     background-position: 93% 90px;
-    padding: 75px 44% 23px 7.5%;
+    padding: 75px 44% 23px 53px;
   }
 
   @include desktop {
@@ -104,12 +104,25 @@
   justify-content: flex-start;
   align-items: center;
 
+
   @include tablet {
     font-size: $header-font-size;
     line-height: $special-tablet-link;
     padding: 0;
     padding-bottom: 35px;
     border: none;
+
+    &:hover {
+      .nutrition-program__link-text::before {
+        background-image: url("../img/arrow-hov.svg");
+        width: 32px;
+        height: 13px;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   @include desktop {
@@ -120,6 +133,18 @@
 .nutrition-program__link-text {
   margin: 0;
   margin-right: 15px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    top: 25%;
+    right: -56px;
+    width: 32px;
+    height: 13px;
+  }
 
   @include tablet {
     margin-right: 24px;
@@ -128,9 +153,4 @@
   @include desktop {
     margin-right: 28px;
   }
-}
-
-.nutrition-program__arrow {
-  width: 32px;
-  height: 12px;
 }

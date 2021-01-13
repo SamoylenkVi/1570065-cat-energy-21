@@ -25,20 +25,22 @@
   min-height: 35px;
   padding-bottom: 12px;
 
-  &:hover {
-    opacity: 80%;
-  }
-
-  &:active {
-    opacity: 60%;
-  }
-
   @include tablet {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin: 0;
     padding: 0;
+
+    &:hover,
+    &:focus {
+      opacity: 80%;
+      outline: none;
+    }
+
+    &:active {
+      opacity: 60%;
+    }
   }
 }
 
