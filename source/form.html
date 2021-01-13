@@ -193,7 +193,7 @@
               <a class="navigation__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--active">Подбор программы</a>
+              <a class="navigation__link">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -212,15 +212,15 @@
             <ul class="form__information-list">
               <li class="form__information-item">
                 <label for="cat-name" class="form__item-name form__item-name--information">ИМЯ:*</label>
-                <input class="form__entry-field  form__entry-field--information filed__input-information" type="text" id="cat-name" name="cat-name" placeholder="Барсик" aria-label="Введите имя вашего кота" required />
+                <input class="form__entry-field form__entry-field--information filed__input-information" type="text" id="cat-name" name="cat-name" placeholder="Барсик" pattern="[-\s\D]*" aria-label="Введите имя вашего кота" required />
               </li>
               <li class="form__information-item">
                 <label for="cat-weight" class="form__item-name form__item-name--information">Вес (кг):*</label>
-                <input class="form__entry-field form__entry-field--information filed__input-information" type="text" id="cat-weight" name="cat-weight" placeholder="7" aria-label="Введите вес вашего кота" required />
+                <input class="form__entry-field form__entry-field--information filed__input-information" type="text" id="cat-weight" name="cat-weight" placeholder="7" pattern="[\d]*" aria-label="Введите вес вашего кота" required />
               </li>
               <li class="form__information-item">
                 <label for="cat-age" class="form__item-name form__item-name--information">Возраст (лет):</label>
-                <input class="form__entry-field form__entry-field--information filed__input-information" type="text" id="cat-age" name="cat-age" placeholder="7" aria-label="Введите возраст вашего кота" />
+                <input class="form__entry-field form__entry-field--information filed__input-information" type="text" id="cat-age" name="cat-age" placeholder="7" pattern="[\d]*" aria-label="Введите возраст вашего кота" />
               </li>
             </ul>
           </fieldset>
@@ -291,7 +291,7 @@
           </ul>
         </fieldset>
         <div class="form__button-wrapper">
-          <button class="form__button" type="submit">
+          <button class="form__button link" type="submit">
             отправить заявку
           </button>
           <p class="form__subtitle">* — Обязательные поля</p>
@@ -324,34 +324,34 @@
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="social__list">
             <li class="social__item">
-              <a href="">
+              <a class="social__link" href="">
                 <span class="visually-hidden">В Контакте</span>
                 <svg class="social__icon social__icon--mobile" width="23" height="16">
                   <use xlink:href="#icon-vk"></use>
                 </svg>
-                <svg class="social__icon social__icon--tablet" width="30" height="22">
+                <svg class="social__icon social__icon--tablet"  width="30" height="22">
                   <use xlink:href="#icon-vk"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a href="">
+              <a class="social__link" href="">
                 <span class="visually-hidden">Instagram</span>
                 <svg class="social__icon social__icon--mobile" width="16" height="16">
                   <use xlink:href="#icon-insta"></use>
                 </svg>
-                <svg class="social__icon social__icon--tablet" width="23" height="23">
+                <svg class="social__icon social__icon--tablet"  width="23" height="23">
                   <use xlink:href="#icon-insta"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a href="">
+              <a class="social__link" href="">
                 <span class="visually-hidden">Facebook</span>
                 <svg class="social__icon social__icon--mobile" width="22" height="22">
                   <use xlink:href="#icon-facebook"></use>
                 </svg>
-                <svg class="social__icon social__icon--tablet">
+                <svg class="social__icon social__icon--tablet" >
                   <use xlink:href="#icon-facebook"></use>
                 </svg>
               </a>
@@ -359,9 +359,9 @@
           </ul>
         </div>
         <div class="footer__copyright">
-          <a class="foter__copyright-link link" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="foter__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
             <p class="footer__copyright-content">HTML Academy</p>
-            <svg class="footer__logo" width="27" height="34">
+            <svg class="footer__logo-html" width="27" height="34">
               <use xlink:href="#logo-html"></use>
             </svg>
           </a>

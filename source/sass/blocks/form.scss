@@ -84,7 +84,8 @@
     line-height: $special-tablet-link;
 
     &:focus {
-      outline: 2px solid $border-grey;
+      border: 2px solid $special_dark-grey;
+      outline: none;
     }
   }
 
@@ -151,6 +152,10 @@
 
   @include tablet {
     padding: 10px 21px 4px;
+
+    &:invalid:not(:placeholder-shown) {
+      border: 2px solid $error-red;
+    }
   }
 
   @include desktop {
@@ -256,7 +261,7 @@
   }
 
   &:invalid:not(:placeholder-shown) {
-    border: 2px solid tomato;
+    border: 2px solid $error-red;
   }
 
   @include tablet {
@@ -300,8 +305,8 @@
   }
 
   &--mail {
-    @include desktop{
-    right: 21px;
+    @include desktop {
+      right: 21px;
     }
   }
 }
@@ -312,8 +317,8 @@
 }
 
 .form__entry-field--person:invalid:not(:placeholder-shown) + .form__information-picture {
-  color: tomato;
-  stroke: tomato;
+  color: $error-red;
+  stroke: $error-red;
 }
 
 .form__information-item--comment {
@@ -349,9 +354,10 @@
   opacity: 0.3;
 }
 
-.filed__radio:focus + .form__item-name--radio::before {
+.filed__radio:focus + .form__item-name--radio::before,
+.filed__radio:hover + .form__item-name--radio::before {
   @include tablet {
-    border: 1px solid $special_dark-grey;
+    border: 1px solid $hover-grey;
   }
 }
 
@@ -473,9 +479,10 @@
   opacity: 0.3;
 }
 
-.filed__checkbox:focus + .form__item-name--extra::before {
+.filed__checkbox:focus + .form__item-name--extra::before,
+.filed__checkbox:hover + .form__item-name--extra::before {
   @include tablet {
-    border: 1px solid $special_dark-grey;
+    border: 1px solid $hover-grey;
   }
 }
 
