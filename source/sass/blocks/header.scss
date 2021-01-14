@@ -9,7 +9,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 11px;
   }
 
   @include desktop {
@@ -31,17 +31,41 @@
     align-items: center;
     margin: 0;
     padding: 0;
+
+    &:hover,
+    &:focus {
+      opacity: 80%;
+      outline: none;
+    }
+
+    &:active {
+      opacity: 60%;
+    }
   }
 }
 
-.header__logo img {
+.header__logo-mobile {
   @include tablet {
-    width: 174px;
-    height: 52px;
+    display: none;
+  }
+}
+
+.header__logo-tablet {
+  display: none;
+
+  @include tablet {
+    display: block;
   }
 
   @include desktop {
-    width: 202px;
-    height: 59px;
+    display: none;
+  }
+}
+
+.header__logo-desktop {
+  display: none;
+
+  @include desktop {
+    display: block;
   }
 }

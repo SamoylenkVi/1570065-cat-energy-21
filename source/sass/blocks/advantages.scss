@@ -13,7 +13,7 @@
 .advantages__title {
   @include font-options($family-oswald, $heading-font-size, $heading-line-height, $normal-font-weight, $basic-black);
   margin: 0;
-  padding: 26px 0 37px;
+  padding: 30px 0 37px;
 
   @include tablet {
     font-size: $heading-tablet-size;
@@ -48,15 +48,72 @@
 }
 
 .advantages__item {
+  position: relative;
   padding-top: 3px;
   padding-left: 81px;
   min-height: 60px;
 
   @include tablet {
     padding: 118px 61px 46px 0;
+    background-repeat: no-repeat;
+    background-position: 125px 6px;
+
+    &--healthy {
+      background-image: url("../img/one.svg");
+    }
+
+    &--quick {
+      background-image: url("../img/two.svg");
+    }
+
+    &--economical {
+      background-image: url("../img/three.svg");
+    }
+
+    &--effective {
+      background-image: url("../img/four.svg");
+    }
   }
 
   @include desktop {
     padding: 114px 1px 46px 0;
+    background-position: 125px 0;
+  }
+}
+
+.advantages__picture {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: $basic-green;
+  top: 1px;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: 50% 45%;
+
+  &--healthy {
+    background-image: url("../img/icon-healthy.svg");
+  }
+
+  &--quick {
+    background-image: url("../img/icon-quick.svg");
+  }
+
+  &--economical {
+    background-image: url("../img/icon-economical.svg");
+  }
+
+  &--effective {
+    background-image: url("../img/icon-effective.svg");
+  }
+
+  @include tablet {
+    top: 7px;
+    width: 80px;
+    height: 80px;
+  }
+
+  @include desktop {
+    top: 1px;
   }
 }

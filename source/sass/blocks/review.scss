@@ -37,7 +37,7 @@
 
 .review__text {
   margin: 0;
-  padding: 16px 0 25px;
+  padding: 15px 0 25px;
 
   @include tablet {
     padding: 16px 28px 51px 0;
@@ -216,7 +216,7 @@
   align-items: center;
 
   @include tablet {
-    padding: 23px 6.5% 69px;
+    padding: 21px 6.5% 69px;
     background-color: $basic-grey;
   }
 
@@ -237,6 +237,17 @@
   @include tablet {
     font-size: $header-font-size;
     line-height: $special-tablet-link;
+    border-bottom: 1px dotted $social-grey;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $social-grey;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 }
 
@@ -272,5 +283,16 @@
     height: 33px;
     border-radius: 50%;
     border: 12px solid #ffffff;
+    box-shadow: 0 1px 3px 1px $border-grey;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 2px 4px 1px $border-grey;
+      outline: none;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 1px $basic-green;
+    }
   }
 }

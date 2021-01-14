@@ -16,11 +16,19 @@
   @include list-default-remove;
   @include remove-indentation;
   display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
   flex-wrap: wrap;
+  padding-right: 3px;
   min-height: 22px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 4px 5px 8px 34px;
+  }
+
+  @include desktop {
+    padding-left: 36px;
+  }
 }
 
 .social__item {
@@ -29,12 +37,54 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @include tablet {
+    margin: 0;
+  }
 }
 
-.social__item a {
+.social__link {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
+
+  @include tablet {
+    width: 50px;
+    height: 50px;
+
+    &:focus,
+    &:hover {
+      outline: none;
+
+      .social__icon {
+        color: $basic-green;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.social__icon {
+  fill: currentColor;
+  color: $social-grey;
+}
+
+.social__icon--mobile {
+  @include tablet {
+    display: none;
+  }
+}
+
+.social__icon--tablet {
+  display: none;
+
+  @include tablet {
+    height: 30px;
+    display: inline;
+  }
 }

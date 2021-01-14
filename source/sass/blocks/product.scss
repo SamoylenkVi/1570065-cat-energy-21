@@ -246,5 +246,14 @@
     min-height: 40px;
     color: $special_dark-grey;
     background-color: $basic-grey;
+
+    &:hover,
+    &:focus {
+      background-color: $mobile-border-grey;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
