@@ -33,6 +33,21 @@
   }
 }
 
+.footer__logo-picture {
+  color: $basic-black;
+
+  @include tablet {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
+
 .footer__copyright {
   min-height: 79px;
   padding-top: 20px;

@@ -104,7 +104,6 @@
   justify-content: flex-start;
   align-items: center;
 
-
   @include tablet {
     font-size: $header-font-size;
     line-height: $special-tablet-link;
@@ -140,14 +139,19 @@
     content: "";
     background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
-    top: 25%;
-    right: -56px;
+    top: 10%;
+    right: -48px;
     width: 32px;
     height: 13px;
   }
 
   @include tablet {
     margin-right: 24px;
+
+    &::before {
+      top: 22%;
+      right: -56px;
+    }
   }
 
   @include desktop {

@@ -92,19 +92,20 @@
   background-position: 50% 45%;
 
   &--healthy {
-    background-image: url("../img/icon-healthy.svg");
+    background-image: url("../img/healthy.svg");
   }
 
   &--quick {
-    background-image: url("../img/icon-quick.svg");
+    // background-image: url("../img/quick.svg");
+    background-image: url("../img/quick.svg");
   }
 
   &--economical {
-    background-image: url("../img/icon-economical.svg");
+    background-image: url("../img/economical.svg");
   }
 
   &--effective {
-    background-image: url("../img/icon-effective.svg");
+    background-image: url("../img/effective.svg");
   }
 
   @include tablet {

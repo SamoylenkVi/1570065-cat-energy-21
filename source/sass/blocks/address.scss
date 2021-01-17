@@ -23,6 +23,10 @@
   min-height: 114px;
   padding-bottom: 27px;
 
+  &--form {
+    padding-bottom: 19px;
+  }
+
   @include tablet {
     align-items: center;
     min-height: 201px;

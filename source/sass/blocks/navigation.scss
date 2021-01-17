@@ -95,15 +95,8 @@
     @include border-mobile($mobile-border-grey);
   }
 
-  &:last-child {
-    &::after {
-      @include border-mobile-bottom($mobile-border-grey);
-    }
-  }
-
   @include tablet {
-    &::before,
-    &::after {
+    &::before {
       display: none;
     }
   }

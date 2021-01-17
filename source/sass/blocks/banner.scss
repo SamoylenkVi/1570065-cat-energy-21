@@ -14,6 +14,18 @@
     margin-bottom: 251px;
     padding: 76px 698px 16px 108px;
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 694px;
+      width: 50%;
+      background-color: #68b738;
+      opacity: 0.85;
+      z-index: 1;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -30,20 +42,22 @@
         background-size: contain;
       }
     }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 694px;
-      width: 50%;
-      background-color: #68b738;
-      opacity: 0.85;
-      z-index: 1;
-    }
   }
 }
+
+// .banner__wrapper::before {
+//   @include desktop {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     height: 694px;
+//     width: 50%;
+//     background-color: #68b738;
+//     opacity: 0.85;
+//     z-index: 1;
+//   }
+// }
 
 .banner__content {
   background-image: url("../img/banner-cat.jpg");
@@ -133,7 +147,13 @@
 }
 
 .banner__title {
-  @include font-options($family-oswald, $heading-font-size, $special-heading-line-height, $normal-font-weight, $basic-white);
+  @include font-options(
+    $family-oswald,
+    $heading-font-size,
+    $special-heading-line-height,
+    $normal-font-weight,
+    $basic-white
+  );
   margin: 0;
   text-align: center;
   padding-bottom: 25px;

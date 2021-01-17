@@ -1,4 +1,4 @@
-.form__box {
+.form__border-box {
   border: none;
   margin: 0;
   padding: 0;
@@ -150,12 +150,26 @@
 .form__entry-field--information {
   padding: 4px 15px 4px;
 
+  &:invalid:placeholder-shown {
+    border: 2px solid $input-grey;
+  }
+
+  &:invalid:hover,
+  &:valid:hover {
+    border: 1px solid $border-grey;
+  }
+
+  &:invalid:focus,
+  &:valid:focus {
+    border: 1px solid $special_dark-grey;
+  }
+
+  &:invalid {
+    border: 2px solid $error-red;
+  }
+
   @include tablet {
     padding: 10px 21px 4px;
-
-    &:invalid:not(:placeholder-shown) {
-      border: 2px solid $error-red;
-    }
   }
 
   @include desktop {
@@ -260,7 +274,21 @@
     border: 2px solid $special_dark-grey;
   }
 
-  &:invalid:not(:placeholder-shown) {
+  &:invalid:placeholder-shown {
+    border: 2px solid $input-grey;
+  }
+
+  &:invalid:hover,
+  &:valid:hover {
+    border: 1px solid $border-grey;
+  }
+
+  &:invalid:focus,
+  &:valid:focus {
+    border: 1px solid $special_dark-grey;
+  }
+
+  &:invalid {
     border: 2px solid $error-red;
   }
 
@@ -316,7 +344,12 @@
   stroke: $basic-green;
 }
 
-.form__entry-field--person:invalid:not(:placeholder-shown) + .form__information-picture {
+.form__entry-field--person:invalid:placeholder-shown + .form__information-picture {
+  color: $special_dark-grey-2;
+  stroke: $special_dark-grey-2;
+}
+
+.form__entry-field--person:invalid + .form__information-picture {
   color: $error-red;
   stroke: $error-red;
 }
@@ -470,7 +503,7 @@
 }
 
 .filed__checkbox:checked + .form__item-name--extra::before {
-  background-image: url("../img/Vector.svg");
+  background-image: url("../img/checked.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -530,7 +563,7 @@
   @include font-options($family-arial, $base-font-size, $special-line-height, $normal-font-weight, $basic-black);
   margin: 0;
   text-align: center;
-  padding-bottom: 39px;
+  padding-bottom: 3px;
 
   @include tablet {
     text-align: start;
