@@ -4,7 +4,7 @@
 
 .page__body {
   @include font-options($family-arial, $base-font-size, $base-line-height, $normal-font-weight, $special_dark-grey);
-  max-width: 1440px;
+  
 
   @include tablet {
     font-size: $form-font-size;

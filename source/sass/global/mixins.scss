@@ -51,11 +51,6 @@
   z-index: -1;
 }
 
-@mixin border-tablet($left, $right) {
-  left: $left;
-  right: $right;
-}
-
 @mixin border-mobile($color) {
   position: absolute;
   content: "";

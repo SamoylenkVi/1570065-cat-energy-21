@@ -16,25 +16,26 @@
   position: relative;
 
   &::before {
-    @include border($none-padding, -$mobile-padding);
+    @include border($special-form-padding, $none-padding);
     top: 15px;
 
     @include tablet {
       top: 23px;
-
-      @include border-tablet(-$tablet-padding, -$tablet-padding);
+      left: $none-padding;
+      right: $none-padding;
     }
 
     @include desktop {
-      @include border-tablet($special-tablet-padding, $special-form-padding);
+      left: $special-tablet-padding;
+      right: $special-form-padding;
     }
   }
 
   &::after {
     @include desktop {
-      @include border($special-form-padding, $none-padding);
+      @include border($none-padding, $none-padding);
       top: 23px;
-      width: 70px;
+      width: 5%;
     }
   }
 }
@@ -155,7 +156,7 @@
   }
 
   &:invalid:hover,
-  &:valid:hover {
+  &:valid:hover  {
     border: 1px solid $border-grey;
   }
 
@@ -279,7 +280,7 @@
   }
 
   &:invalid:hover,
-  &:valid:hover {
+  &:valid:hover  {
     border: 1px solid $border-grey;
   }
 
@@ -322,6 +323,8 @@
   top: 13px;
   right: 14px;
   pointer-events: none;
+  fill: currentColor;
+
 
   @include tablet {
     top: 16px;
@@ -341,17 +344,17 @@
 
 .form__entry-field--person:disabled + .form__information-picture {
   color: $basic-green;
-  stroke: $basic-green;
+
 }
 
 .form__entry-field--person:invalid:placeholder-shown + .form__information-picture {
   color: $special_dark-grey-2;
-  stroke: $special_dark-grey-2;
+
 }
 
 .form__entry-field--person:invalid + .form__information-picture {
   color: $error-red;
-  stroke: $error-red;
+
 }
 
 .form__information-item--comment {
@@ -563,7 +566,7 @@
   @include font-options($family-arial, $base-font-size, $special-line-height, $normal-font-weight, $basic-black);
   margin: 0;
   text-align: center;
-  padding-bottom: 3px;
+  padding-bottom: 39px;
 
   @include tablet {
     text-align: start;
