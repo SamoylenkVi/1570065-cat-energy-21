@@ -4,7 +4,6 @@
 
 .page__body {
   @include font-options($family-arial, $base-font-size, $base-line-height, $normal-font-weight, $special_dark-grey);
-  
 
   @include tablet {
     font-size: $form-font-size;
@@ -47,6 +46,7 @@
 
     @include tablet {
       padding-bottom: 46px;
+      padding-left: 69px;
     }
   }
 }

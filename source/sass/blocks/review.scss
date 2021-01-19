@@ -86,6 +86,7 @@
   flex-direction: column;
   justify-content: start;
   align-items: stretch;
+  margin: 0;
 }
 
 .review__statistics-title {
@@ -175,37 +176,37 @@
   min-height: 270px;
   margin-bottom: 7px;
 
-  &--before {
-    background-image: url("../img/cat-review-before.png");
-    background-repeat: no-repeat;
-    background-position: 62% 72%;
-  }
-
-  &--after {
-    background-image: url("../img/cat-review-after.png");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-  }
-
   @include tablet {
     min-height: 542px;
     position: relative;
-
-    &--before {
-      background-image: url("../img/before-tablet.png"), url("../img/after-tablet.png");
-      background-repeat: no-repeat;
-      background-position: 0 -23%, 100% -36%;
-      z-index: 1;
-    }
   }
 
   @include desktop {
     min-height: 532px;
-
-    &--before {
-      background-position: -22% 18%, 112% 12%;
-    }
   }
+}
+
+.review__image-before {
+  background-image: url("../img/cat-review-before.png");
+  background-repeat: no-repeat;
+  background-position: 62% 72%;
+
+  @include tablet {
+    background-image: url("../img/before-tablet.png"), url("../img/after-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 0 -23%, 100% -36%;
+    z-index: 1;
+  }
+
+  @include desktop {
+    background-position: -22% 18%, 112% 12%;
+  }
+}
+
+.review__image-after {
+  background-image: url("../img/cat-review-after.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .review__fiter {

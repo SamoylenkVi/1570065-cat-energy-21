@@ -62,7 +62,7 @@
   }
 }
 
-.foter__copyright-link {
+.footer__copyright-link {
   @include link-default-remove;
   display: flex;
   flex-direction: row;
@@ -94,6 +94,11 @@
   margin: 0;
   font-size: $form-font-size;
   padding: 0 8px 5px 0;
+
+  &--form,
+  &--catalog {
+    padding-bottom: 0;
+  }
 
   @include tablet {
     padding: 0 24px 4px 0;
