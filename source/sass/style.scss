@@ -5,9 +5,10 @@
 @import "global/mixins.scss";
 
 //Blocks
+@import "global/visually-hidden.scss";
 @import "blocks/page.scss";
-@import "blocks/wrapper.scss";
 @import "blocks/title.scss";
+@import "blocks/wrapper.scss";
 @import "blocks/link.scss";
 @import "blocks/header.scss";
 @import "blocks/navigation.scss";
