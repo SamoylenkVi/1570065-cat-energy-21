@@ -1,45 +1,3 @@
-.form__border-box {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
-.form__box--base {
-  border-bottom: 1px solid $special-border-grey;
-
-  @include tablet {
-    border: none;
-  }
-}
-
-.form__box--additional {
-  position: relative;
-
-  &::before {
-    @include border($special-form-padding, $none-padding);
-    top: 15px;
-
-    @include tablet {
-      top: 23px;
-      left: $none-padding;
-      right: $none-padding;
-    }
-
-    @include desktop {
-      left: $special-tablet-padding;
-      right: $special-form-padding;
-    }
-  }
-
-  &::after {
-    @include desktop {
-      @include border($none-padding, $none-padding);
-      top: 23px;
-      width: 5%;
-    }
-  }
-}
-
 .form__main-title {
   @include font-options($family-oswald, $base-font-size, $base-line-height, $normal-font-weight, $basic-black);
   text-transform: uppercase;
@@ -55,6 +13,82 @@
 
   @include desktop {
     padding: 8px 80px 66px 0;
+  }
+}
+
+.form__border-box {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form__box--base {
+  position: relative;
+
+  &::before {
+    @include border-mobile-bottom($special-border-grey);
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.form__box--additional {
+  overflow-x: hidden;
+}
+
+.form__title {
+  font-size: $subtitle-font-size;
+  line-height: $form-line-height;
+  text-align: left;
+  padding-bottom: 36px;
+  padding-right: 21px;
+  background-color: $basic-white;
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    @include border;
+    top: 15px;
+
+    @include tablet {
+      top: 23px;
+      left: $none-padding;
+      right: $none-padding;
+    }
+
+    @include desktop {
+      left: $special-tablet-padding;
+    }
+  }
+
+  &::after {
+    @include tablet {
+      @include border;
+      right: 0;
+      top: 23px;
+    }
+
+    @include desktop {
+      right: $none-padding;
+      top: 23px;
+    }
+  }
+
+  @include tablet {
+    font-size: $heading-font-size;
+    line-height: $special-heading-line-height;
+    padding: 1px 42px 75px 39px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    padding-left: 40px;
+    margin-left: -40px;
   }
 }
 
@@ -101,29 +135,6 @@
   }
 }
 
-.form__title {
-  font-size: $subtitle-font-size;
-  line-height: $form-line-height;
-  text-align: left;
-  padding-bottom: 36px;
-  padding-right: 21px;
-  background-color: $basic-white;
-
-  @include tablet {
-    font-size: $heading-font-size;
-    line-height: $special-heading-line-height;
-    padding: 1px 42px 75px 39px;
-
-    br {
-      display: none;
-    }
-  }
-
-  @include desktop {
-    padding-left: 1px;
-  }
-}
-
 .form__content {
   padding-bottom: 26px;
 
@@ -156,7 +167,7 @@
   }
 
   &:invalid:hover,
-  &:valid:hover  {
+  &:valid:hover {
     border: 1px solid $border-grey;
   }
 
@@ -280,7 +291,7 @@
   }
 
   &:invalid:hover,
-  &:valid:hover  {
+  &:valid:hover {
     border: 1px solid $border-grey;
   }
 
@@ -325,7 +336,6 @@
   pointer-events: none;
   fill: currentColor;
 
-
   @include tablet {
     top: 16px;
     right: 53px;
@@ -344,17 +354,14 @@
 
 .form__entry-field--person:disabled + .form__information-picture {
   color: $basic-green;
-
 }
 
 .form__entry-field--person:invalid:placeholder-shown + .form__information-picture {
   color: $special_dark-grey-2;
-
 }
 
 .form__entry-field--person:invalid + .form__information-picture {
   color: $error-red;
-
 }
 
 .form__information-item--comment {
@@ -529,12 +536,12 @@
   @include tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-left: 41px;
+    padding-left: 71px;
     padding-bottom: 72px;
   }
 
   @include desktop {
-    padding-left: 0;
+    padding-left: 31px;
     padding-bottom: 82px;
   }
 }
@@ -566,7 +573,7 @@
   @include font-options($family-arial, $base-font-size, $special-line-height, $normal-font-weight, $basic-black);
   margin: 0;
   text-align: center;
-  padding-bottom: 39px;
+  padding-bottom: 30px;
 
   @include tablet {
     text-align: start;

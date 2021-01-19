@@ -41,14 +41,13 @@
   }
 }
 
-@mixin border($left, $right) {
+@mixin border {
   position: absolute;
   content: "";
   height: 2px;
   background-color: $basic-green;
-  left: $left;
-  right: $right;
   z-index: -1;
+  width: 100vw;
 }
 
 @mixin border-mobile($color) {

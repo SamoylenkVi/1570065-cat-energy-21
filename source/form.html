@@ -44,10 +44,10 @@
     </header>
     <main class="page__main">
       <h1 class="page__title page__title--form title wrapper">Подбор программы</h1>
-      <form class="form__wrapper" action="https://echo.htmlacademy.ru" method="GET">
+      <form class="form__wrapper form" action="https://echo.htmlacademy.ru" method="GET">
         <div class="wrapper">
           <h2 class="form__main-title">
-            Заполните анкету, и мы подберем</br>
+            Заполните анкету, и мы подберем<br/>
             программу питания для вашего кота
           </h2>
         </div>
@@ -58,15 +58,15 @@
               <ul class="form__information-list">
                 <li class="form__information-item">
                   <label for="cat-name" class="form__item-name form__item-name--information">ИМЯ:*</label>
-                  <input class="form__entry-field form__entry-field--information filed__input-information" type="text" id="cat-name" name="cat-name" placeholder="Барсик" pattern="[-\s\D]*" aria-label="Введите имя вашего кота" required />
+                  <input class="form__entry-field form__entry-field--information filed-input-information" type="text" id="cat-name" name="cat-name" placeholder="Барсик" pattern="[-\s\D]*" aria-label="Введите имя вашего кота" required />
                 </li>
                 <li class="form__information-item">
                   <label for="cat-weight" class="form__item-name form__item-name--information">Вес (кг):*</label>
-                  <input class="form__entry-field form__entry-field--information filed__input-information" type="text" id="cat-weight" name="cat-weight" placeholder="7" pattern="[\d]*" aria-label="Введите вес вашего кота" required />
+                  <input class="form__entry-field form__entry-field--information filed-input-information" type="text" id="cat-weight" name="cat-weight" placeholder="7" pattern="[\d]*" aria-label="Введите вес вашего кота" required />
                 </li>
                 <li class="form__information-item">
                   <label for="cat-age" class="form__item-name form__item-name--information">Возраст (лет):</label>
-                  <input class="form__entry-field form__entry-field--information filed__input-information" type="text" id="cat-age" name="cat-age" value="7" pattern="[\d]*" aria-label="Введите возраст вашего кота" />
+                  <input class="form__entry-field form__entry-field--information filed-input-information" type="text" id="cat-age" name="cat-age" value="7" pattern="[\d]*" aria-label="Введите возраст вашего кота" />
                 </li>
               </ul>
             </fieldset>
@@ -76,15 +76,15 @@
               <legend class="visually-hidden">Цель программы</legend>
               <ul class="form__goal-list">
                 <li class="form__goal-item">
-                  <input class="visually-hidden filed__radio" type="radio" name="goal" id="slim" checked aria-label="Коту необходимо похудеть" />
+                  <input class="visually-hidden filed-radio" type="radio" name="goal" id="slim" checked aria-label="Коту необходимо похудеть" />
                   <label class="form__item-name form__item-name--radio" for="slim">Похудение</label>
                 </li>
                 <li class="form__goal-item">
-                  <input class="visually-hidden filed__radio" type="radio" name="goal" id="fat" aria-label="Коту необходимо набрать массу" />
+                  <input class="visually-hidden filed-radio" type="radio" name="goal" id="fat" aria-label="Коту необходимо набрать массу" />
                   <label class="form__item-name form__item-name--radio" for="fat">Набор массы</label>
                 </li>
                 <li class="form__goal-item">
-                  <input class="visually-hidden filed__radio" type="radio" name="goal" id="advice" aria-label="Нужен ваш совет" />
+                  <input class="visually-hidden filed-radio" type="radio" name="goal" id="advice" aria-label="Нужен ваш совет" />
                   <label class="form__item-name form__item-name--radio" for="advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
@@ -92,22 +92,22 @@
           </div>
         </div>
         <div class="form__box form__box--additional">
-          <div class="wrapper">
+          <div class="wrapper wrapper--form">
             <fieldset class="form__person-information form__border-box">
               <legend class="form__title title">
-                Контактные данные  </br>(владельца кота)
+                Контактные данные <br>(владельца кота)
               </legend>
               <ul class="form__information-list form__information-list--person">
                 <li class="form__information-item form__information-social">
                   <label for="email" class="form__item-name form__item-name--person">E-mail:*</label>
-                  <input class="form__entry-field form__entry-field--person filed__person-information" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" aria-label="Введите ваш email" required pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" />
+                  <input class="form__entry-field form__entry-field--person filed-person-information" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" aria-label="Введите ваш email" required pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" />
                   <svg class="form__information-picture form__information-picture--mail" width="20" height="20">
                     <use xlink:href="/img/sprite.svg#icon_email"></use>
                   </svg>
                 </li>
                 <li class="form__information-item form__information-social">
                   <label for="phone" class="form__item-name form__item-name--person form__tel">Телефон:*</label>
-                  <input class="form__entry-field form__entry-field--person form__entry-field--tel  filed__person-information" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" aria-label="Введите ваш телефон" required pattern="8\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="17" maxlength="17" />
+                  <input class="form__entry-field form__entry-field--person form__entry-field--tel  filed-person-information" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" aria-label="Введите ваш телефон" required pattern="8\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="17" maxlength="17" />
                   <svg class="form__information-picture" width="20" height="20">
                     <use xlink:href="/img/sprite.svg#icon_phone"></use>
                   </svg>
@@ -121,7 +121,7 @@
             <fieldset class="form__comment form__border-box">
               <legend class="form__title title">Комментарий</legend>
               <div class="form__information-item form__information-item--comment">
-                <textarea class="form__entry-field form__entry-field--comment field__comment" placeholder="Расскажите обо всех повадках кота" name="comment" aria-label="Расскажите обо всех повадках вашего кота"></textarea>
+                <textarea class="form__entry-field form__entry-field--comment field-comment" placeholder="Расскажите обо всех повадках кота" name="comment" aria-label="Расскажите обо всех повадках вашего кота"></textarea>
               </div>
             </fieldset>
           </div>
@@ -132,19 +132,19 @@
               <legend class="form__title form__title--extra title">Дополнительно</legend>
               <ul class="form__extra-list">
                 <li class="form__extra-item">
-                  <input class="visually-hidden filed__checkbox" type="checkbox" name="sugar-substitute" id="sugar-substitute" checked />
+                  <input class="visually-hidden filed-checkbox" type="checkbox" name="sugar-substitute" id="sugar-substitute" checked />
                   <label class="form__item-name form__item-name--extra" for="sugar-substitute">Сахарозаменитель</label>
                 </li>
                 <li class="form__extra-item">
-                  <input class="visually-hidden filed__checkbox" type="checkbox" name="water" id="water" />
+                  <input class="visually-hidden filed-checkbox" type="checkbox" name="water" id="water" />
                   <label class="form__item-name form__item-name--extra" for="water">Питьевая вода</label>
                 </li>
                 <li class="form__extra-item">
-                  <input class="visually-hidden filed__checkbox" type="checkbox" name="milk" id="milk" />
+                  <input class="visually-hidden filed-checkbox" type="checkbox" name="milk" id="milk" />
                   <label class="form__item-name form__item-name--extra" for="milk">Молоко</label>
                 </li>
                 <li class="form__extra-item">
-                  <input class="visually-hidden filed__checkbox" type="checkbox" name="vitamins" id="vitamins" />
+                  <input class="visually-hidden filed-checkbox" type="checkbox" name="vitamins" id="vitamins" />
                   <label class="form__item-name form__item-name--extra" for="vitamins">Витамины</label>
                 </li>
               </ul>
@@ -163,7 +163,7 @@
         <div class="address__map-wrapper">
           <div class="address__wrapper wrapper">
             <div class="address__container">
-              <div class="address__content">
+              <div class="address__content address__content--form">
                 <h3 class="address__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
                 <p class="address__text">
                   ул. Большая Конюшенная, д. 19/8
@@ -178,7 +178,7 @@
     </main>
     <footer class="page__footer footer">
       <div class="footer__wrapper wrapper">
-        <a class="footer__logo" href="">
+        <a class="footer__logo footer__logo--form" href="">
           <svg class="footer__logo-picture" width="128" height="26">
             <use xlink:href="/img/sprite.svg#footer-logo"></use>
           </svg>
@@ -222,8 +222,8 @@
           </ul>
         </div>
         <div class="footer__copyright">
-          <a class="foter__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-            <p class="footer__copyright-content">HTML Academy</p>
+          <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <p class="footer__copyright-content footer__copyright-content--form">HTML Academy</p>
             <svg class="footer__logo-html" width="27" height="34">
               <use xlink:href="/img/sprite.svg#logo_html"></use>
             </svg>
