@@ -11,7 +11,7 @@ const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
-const uglify = require("gulp-uglify-es");
+const uglify = require("gulp-uglify-es").default;
 const del = require("del");
 
 // Styles
@@ -96,15 +96,15 @@ exports.html = html;
 
 // script
 
-// const  script = () => {
-//   return gulp.src("source/js/script.js")
-//   .pipe(uglify())
-//   .pipe(rename("script.min.js"))
-//   .pipe(gulp.dest("build/js"))
-//   .pipe(sync.stream());
-// }
+const  script = () => {
+  return gulp.src("source/js/script.js")
+  .pipe(rename("script.min.js"))
+  .pipe(uglify())
+  .pipe(gulp.dest("build/js"))
+  .pipe(sync.stream());
+}
 
-// exports.script = script;
+exports.script = script;
 
 //Copy
 
@@ -148,6 +148,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/js/*.js", gulp.series("script"));
 }
 
 //Build
@@ -155,6 +156,7 @@ const watcher = () => {
 const build = gulp.series(
   clean,
   gulp.parallel(
+    script,
     styles,
     normalize,
     html,
