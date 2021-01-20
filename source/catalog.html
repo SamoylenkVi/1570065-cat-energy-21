@@ -24,7 +24,7 @@
             <use xlink:href="/img/sprite.svg#logo-desktop"></use>
           </svg>
         </a>
-        <nav class="header__navigation navigation navigation--opend">
+        <nav class="header__navigation navigation navigation--no-js">
           <button class="navigation__toggle" type="button">
             <span class="navigation__toggle-content"></span>
           </button>
@@ -359,7 +359,7 @@
               </div>
             </div>
           </div>
-          <iframe class="address__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1605374155339!5m2!1sru!2sru" style="border: 0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <div class="address__map" id="map"></div>
         </div>
       </section>
     </main>
@@ -367,7 +367,7 @@
       <div class="footer__wrapper wrapper">
         <a class="footer__logo" href="">
           <svg class="footer__logo-picture" width="128" height="26">
-            <use xlink:href="/img/sprite.svg#footer-logo"></use>
+            <use xlink:href="img/sprite.svg#footer-logo"></use>
           </svg>
         </a>
         <div class="footer__social social">
@@ -377,10 +377,10 @@
               <a class="social__link" href="">
                 <span class="visually-hidden">В Контакте</span>
                 <svg class="social__icon social__icon--mobile" width="23" height="16" viewBox="0 0 29 18">
-                  <use xlink:href="/img/sprite.svg#icon_vkontakte"></use>
+                  <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
                 </svg>
                 <svg class="social__icon social__icon--tablet" width="29" height="17" viewBox="0 0 29 18">
-                  <use xlink:href="/img/sprite.svg#icon_vkontakte"></use>
+                  <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
                 </svg>
               </a>
             </li>
@@ -388,10 +388,10 @@
               <a class="social__link" href="">
                 <span class="visually-hidden">Instagram</span>
                 <svg class="social__icon social__icon--mobile" width="16" height="16" viewBox="0 0 23 23">
-                  <use xlink:href="/img/sprite.svg#icon_instagram"></use>
+                  <use xlink:href="img/sprite.svg#icon_instagram"></use>
                 </svg>
                 <svg class="social__icon social__icon--tablet" width="23" height="23" viewBox="0 0 23 23">
-                  <use xlink:href="/img/sprite.svg#icon_instagram"></use>
+                  <use xlink:href="img/sprite.svg#icon_instagram"></use>
                 </svg>
               </a>
             </li>
@@ -399,10 +399,10 @@
               <a class="social__link" href="">
                 <span class="visually-hidden">Facebook</span>
                 <svg class="social__icon social__icon--mobile" width="22" height="22" viewBox="0 0 15 29">
-                  <use xlink:href="/img/sprite.svg#icon_facebook"></use>
+                  <use xlink:href="img/sprite.svg#icon_facebook"></use>
                 </svg>
                 <svg class="social__icon social__icon--tablet" width="15" height="29" viewBox="0 0 15 29">
-                  <use xlink:href="/img/sprite.svg#icon_facebook"></use>
+                  <use xlink:href="img/sprite.svg#icon_facebook"></use>
                 </svg>
               </a>
             </li>
@@ -412,13 +412,15 @@
           <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
             <p class="footer__copyright-content footer__copyright-content--catalog">HTML Academy</p>
             <svg class="footer__logo-html" width="27" height="34">
-              <use xlink:href="/img/sprite.svg#logo_html"></use>
+              <use xlink:href="img/sprite.svg#logo_html"></use>
             </svg>
           </a>
         </div>
       </div>
     </footer>
   </div>
+  <script src="js/script.min.js"></script>
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW2lQX9tn2UgH5bWtZMuibOZAnZrzTTHA&callback=initMap"></script>
 </body>
 
 </html>
