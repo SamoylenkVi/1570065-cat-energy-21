@@ -87,7 +87,9 @@ exports.createwebp = createwebp;
 
 const html = () => {
   return gulp.src("source/*.html")
-  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(htmlmin({ collapseWhitespace: true,
+    ignoreCustomFragments: [ /(\s\<br\>|\<br\>\s)/gi ]
+}))
   .pipe(gulp.dest("build"))
   .pipe(sync.stream())
 }
@@ -162,6 +164,7 @@ const build = gulp.series(
     html,
     copy,
     sprite,
+    images,
     createwebp
   )
 )
