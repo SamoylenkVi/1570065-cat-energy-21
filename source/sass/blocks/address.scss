@@ -23,6 +23,14 @@
   min-height: 114px;
   padding-bottom: 27px;
 
+  &--form {
+    padding-bottom: 19px;
+  }
+
+  &--catalog {
+    padding-bottom: 12px;
+  }
+
   @include tablet {
     align-items: center;
     min-height: 201px;
@@ -57,7 +65,7 @@
 
   @include desktop {
     padding-left: 75px;
-    padding-top: 6px;
+    padding-top: 0;
   }
 }
 
@@ -84,7 +92,7 @@
     text-align: left;
     width: 70%;
     margin-left: 40px;
-    padding-top: 8px;
+    padding-top: 2px;
   }
 }
 
@@ -112,11 +120,30 @@
   width: 100%;
   height: 362px;
 
+  background-image: url("../img/map-mobile.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/map-mobile@2x.png");
+  }
+
   @include tablet {
     height: 399px;
+    background-image: url("../img/map-tablet.png");
+
+    @include retina {
+      background-image: url("../img/map-tablet@2x.png");
+    }
 
     @include desktop {
       height: 400px;
+      background-image: url("../img/map-desktop.png");
+
+      @include retina {
+        background-image: url("../img/map-desktop@2x.png");
+      }
     }
   }
 }

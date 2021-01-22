@@ -4,14 +4,33 @@
   align-items: center;
   padding-bottom: 22px;
   flex-basis: 50%;
+  position: relative;
 
   &--more {
     padding-bottom: 32px;
   }
 
+  &::before {
+    @include border-mobile-bottom($mobile-border-grey);
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &:first-of-type {
+    &::after {
+      @include border-mobile($mobile-border-grey);
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
   @include tablet {
     padding-bottom: 40px;
-    background-image: linear-gradient($basic-white 14%, $basic-grey 14%);
+    background-image: linear-gradient($basic-white 14.4%, $basic-grey 14.4%);
 
     &--more {
       margin-top: 76px;
@@ -95,11 +114,12 @@
     position: relative;
     padding-bottom: 31px;
 
-    ::before {
+    ::before,
+    ::after {
       position: absolute;
       content: "";
       width: 30px;
-      height: 1px;
+      height: 2px;
       background-color: $basic-black;
       top: -37px;
       left: 50%;
@@ -107,13 +127,6 @@
     }
 
     ::after {
-      position: absolute;
-      content: "";
-      width: 30px;
-      height: 1px;
-      background-color: $basic-black;
-      top: -37px;
-      left: 50%;
       transform: translateX(-50%) rotate(90deg);
     }
   }
@@ -121,7 +134,7 @@
   @include tablet {
     justify-content: flex-end;
     align-items: center;
-    padding-bottom: 34px;
+    padding-bottom: 33px;
 
     &--more {
       padding-bottom: 58px;
@@ -155,12 +168,21 @@
 
 .product__content-item {
   @include tablet {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $border-grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
 .product__title {
-  @include font-options($family-oswald, $form-font-size, $header-line-height, $normal-font-weight, $special_dark-grey-2);
+  @include font-options(
+    $family-oswald,
+    $form-font-size,
+    $header-line-height,
+    $normal-font-weight,
+    $special_dark-grey-2
+  );
   text-transform: uppercase;
   margin: 0;
   padding: 2px 43px 14px 0;
@@ -218,7 +240,9 @@
   @include tablet {
     font-size: $form-font-size;
     min-height: 30px;
-    padding: 6px 2px 8.9px 1px;
+    padding: 0;
+    display: flex;
+    align-items: center;
 
     &--more {
       text-align: center;

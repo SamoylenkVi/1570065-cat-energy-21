@@ -1,44 +1,3 @@
-.form__box {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
-.form__box--base {
-  border-bottom: 1px solid $special-border-grey;
-
-  @include tablet {
-    border: none;
-  }
-}
-
-.form__box--additional {
-  position: relative;
-
-  &::before {
-    @include border($none-padding, -$mobile-padding);
-    top: 15px;
-
-    @include tablet {
-      top: 23px;
-
-      @include border-tablet(-$tablet-padding, -$tablet-padding);
-    }
-
-    @include desktop {
-      @include border-tablet($special-tablet-padding, $special-form-padding);
-    }
-  }
-
-  &::after {
-    @include desktop {
-      @include border($special-form-padding, $none-padding);
-      top: 23px;
-      width: 70px;
-    }
-  }
-}
-
 .form__main-title {
   @include font-options($family-oswald, $base-font-size, $base-line-height, $normal-font-weight, $basic-black);
   text-transform: uppercase;
@@ -54,6 +13,82 @@
 
   @include desktop {
     padding: 8px 80px 66px 0;
+  }
+}
+
+.form__border-box {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form__box--base {
+  position: relative;
+
+  &::before {
+    @include border-mobile-bottom($special-border-grey);
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.form__box--additional {
+  overflow-x: hidden;
+}
+
+.form__title {
+  font-size: $subtitle-font-size;
+  line-height: $form-line-height;
+  text-align: left;
+  padding-bottom: 36px;
+  padding-right: 21px;
+  background-color: $basic-white;
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    @include border;
+    top: 15px;
+
+    @include tablet {
+      top: 23px;
+      left: $none-padding;
+      right: $none-padding;
+    }
+
+    @include desktop {
+      left: $special-tablet-padding;
+    }
+  }
+
+  &::after {
+    @include tablet {
+      @include border;
+      right: 0;
+      top: 23px;
+    }
+
+    @include desktop {
+      right: $none-padding;
+      top: 23px;
+    }
+  }
+
+  @include tablet {
+    font-size: $heading-font-size;
+    line-height: $special-heading-line-height;
+    padding: 1px 42px 75px 39px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    padding-left: 40px;
+    margin-left: -40px;
   }
 }
 
@@ -77,6 +112,7 @@
   box-sizing: border-box;
   border: 1px solid $border-grey;
   margin: 0;
+  resize: none;
 
   @include tablet {
     min-height: 52px;
@@ -97,29 +133,6 @@
       font-size: $header-font-size;
       line-height: $special-tablet-link;
     }
-  }
-}
-
-.form__title {
-  font-size: $subtitle-font-size;
-  line-height: $form-line-height;
-  text-align: left;
-  padding-bottom: 36px;
-  padding-right: 21px;
-  background-color: $basic-white;
-
-  @include tablet {
-    font-size: $heading-font-size;
-    line-height: $special-heading-line-height;
-    padding: 1px 42px 75px 39px;
-
-    br {
-      display: none;
-    }
-  }
-
-  @include desktop {
-    padding-left: 1px;
   }
 }
 
@@ -148,14 +161,28 @@
 }
 
 .form__entry-field--information {
-  padding: 4px 15px 4px;
+  padding: 6.5px 15px 4px;
+
+  &:invalid:placeholder-shown {
+    border: 2px solid $input-grey;
+  }
+
+  &:invalid:hover,
+  &:valid:hover {
+    border: 1px solid $border-grey;
+  }
+
+  &:invalid:focus,
+  &:valid:focus {
+    border: 1px solid $special_dark-grey;
+  }
+
+  &:invalid {
+    border: 2px solid $error-red;
+  }
 
   @include tablet {
     padding: 10px 21px 4px;
-
-    &:invalid:not(:placeholder-shown) {
-      border: 2px solid $error-red;
-    }
   }
 
   @include desktop {
@@ -254,13 +281,27 @@
 }
 
 .form__entry-field--person {
-  padding: 5px 38px 3px 14px;
+  padding: 7.5px 38px 3px 14px;
 
   &:disabled {
     border: 2px solid $special_dark-grey;
   }
 
-  &:invalid:not(:placeholder-shown) {
+  &:invalid:placeholder-shown {
+    border: 2px solid $input-grey;
+  }
+
+  &:invalid:hover,
+  &:valid:hover {
+    border: 1px solid $border-grey;
+  }
+
+  &:invalid:focus,
+  &:valid:focus {
+    border: 1px solid $special_dark-grey;
+  }
+
+  &:invalid {
     border: 2px solid $error-red;
   }
 
@@ -291,9 +332,10 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 13px;
+  top: 15px;
   right: 14px;
   pointer-events: none;
+  fill: currentColor;
 
   @include tablet {
     top: 16px;
@@ -313,12 +355,14 @@
 
 .form__entry-field--person:disabled + .form__information-picture {
   color: $basic-green;
-  stroke: $basic-green;
 }
 
-.form__entry-field--person:invalid:not(:placeholder-shown) + .form__information-picture {
+.form__entry-field--person:invalid:placeholder-shown + .form__information-picture {
+  color: $special_dark-grey-2;
+}
+
+.form__entry-field--person:invalid + .form__information-picture {
   color: $error-red;
-  stroke: $error-red;
 }
 
 .form__information-item--comment {
@@ -340,7 +384,7 @@
   }
 }
 
-.filed__radio:checked + .form__item-name--radio::before {
+.form__filed-radio:checked + .form__item-name--radio::before {
   background-color: $basic-green;
   background-clip: content-box;
   padding: 8px;
@@ -350,12 +394,12 @@
   }
 }
 
-.filed__radio:disabled + .form__item-name--radio {
+.form__filed-radio:disabled + .form__item-name--radio {
   opacity: 0.3;
 }
 
-.filed__radio:focus + .form__item-name--radio::before,
-.filed__radio:hover + .form__item-name--radio::before {
+.form__filed-radio:focus + .form__item-name--radio::before,
+.form__filed-radio:hover + .form__item-name--radio::before {
   @include tablet {
     border: 1px solid $hover-grey;
   }
@@ -469,18 +513,18 @@
   }
 }
 
-.filed__checkbox:checked + .form__item-name--extra::before {
-  background-image: url("../img/Vector.svg");
+.form__filed-checkbox:checked + .form__item-name--extra::before {
+  background-image: url("../img/checked.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
-.filed__checkbox:disabled + .form__item-name--extra {
+.form__filed-checkbox:disabled + .form__item-name--extra {
   opacity: 0.3;
 }
 
-.filed__checkbox:focus + .form__item-name--extra::before,
-.filed__checkbox:hover + .form__item-name--extra::before {
+.form__filed-checkbox:focus + .form__item-name--extra::before,
+.form__filed-checkbox:hover + .form__item-name--extra::before {
   @include tablet {
     border: 1px solid $hover-grey;
   }
@@ -493,12 +537,12 @@
   @include tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-left: 41px;
+    padding-left: 71px;
     padding-bottom: 72px;
   }
 
   @include desktop {
-    padding-left: 0;
+    padding-left: 31px;
     padding-bottom: 82px;
   }
 }
@@ -530,7 +574,7 @@
   @include font-options($family-arial, $base-font-size, $special-line-height, $normal-font-weight, $basic-black);
   margin: 0;
   text-align: center;
-  padding-bottom: 39px;
+  padding-bottom: 30px;
 
   @include tablet {
     text-align: start;

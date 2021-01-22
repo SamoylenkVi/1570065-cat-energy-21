@@ -41,19 +41,13 @@
   }
 }
 
-@mixin border($left, $right) {
+@mixin border {
   position: absolute;
   content: "";
   height: 2px;
   background-color: $basic-green;
-  left: $left;
-  right: $right;
   z-index: -1;
-}
-
-@mixin border-tablet($left, $right) {
-  left: $left;
-  right: $right;
+  width: 100vw;
 }
 
 @mixin border-mobile($color) {

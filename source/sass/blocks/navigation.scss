@@ -1,3 +1,9 @@
+.navigation--no-js {
+  .navigation__toggle {
+    display: none;
+  }
+}
+
 .navigation__toggle {
   @include remove-indentation;
   position: absolute;
@@ -14,40 +20,50 @@
   }
 }
 
-.navigation--closed .navigation__toggle-content {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translateX(50%);
-  width: 36px;
-  height: 2px;
-  background-color: $basic-black;
+.navigation--close {
+  .navigation__list {
+    display: none;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -10px);
-    width: 36px;
-    height: 2px;
-    background-color: $basic-black;
+    @include tablet {
+      display: flex;
+    }
   }
 
-  &::after {
+  .navigation__toggle-content {
     content: "";
     position: absolute;
     top: 50%;
     right: 50%;
-    transform: translate(50%, 10px);
+    transform: translateX(50%);
     width: 36px;
     height: 2px;
     background-color: $basic-black;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -10px);
+      width: 36px;
+      height: 2px;
+      background-color: $basic-black;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, 10px);
+      width: 36px;
+      height: 2px;
+      background-color: $basic-black;
+    }
   }
 }
 
-.navigation--opend .navigation__toggle-content {
+.navigation--open .navigation__toggle-content {
   content: "";
   position: absolute;
   top: 50%;
@@ -95,15 +111,8 @@
     @include border-mobile($mobile-border-grey);
   }
 
-  &:last-child {
-    &::after {
-      @include border-mobile-bottom($mobile-border-grey);
-    }
-  }
-
   @include tablet {
-    &::before,
-    &::after {
+    &::before {
       display: none;
     }
   }
