@@ -68,7 +68,7 @@
   flex-shrink: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: start;
   gap: 33px;
   margin-bottom: 3px;
 
@@ -115,7 +115,7 @@
   text-transform: lowercase;
   margin-top: -8px;
   background-color: $basic-grey;
-  width: 69%;
+  width: 66%;
   padding: 0 6px;
 
   @include tablet {

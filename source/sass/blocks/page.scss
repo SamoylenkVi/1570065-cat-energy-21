@@ -31,6 +31,9 @@
 
   &--catalog {
     padding-bottom: 40px;
+    padding-left: 0;
+    padding-right: 0;
+
 
     @include tablet {
       padding-bottom: 89px;
@@ -43,10 +46,16 @@
 
   &--form {
     padding-bottom: 27px;
+    padding-left: 0;
+    padding-right: 0;
 
     @include tablet {
       padding-bottom: 46px;
-      padding-left: 69px;
+      padding-left: 39px;
+    }
+
+    @include desktop {
+      padding-left: 0;
     }
   }
 }

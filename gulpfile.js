@@ -14,9 +14,9 @@ const svgstore = require("gulp-svgstore");
 const uglify = require("gulp-uglify-es").default;
 const del = require("del");
 
-// Styles
+// minStyles
 
-const styles = () => {
+const minStyles = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -29,6 +29,21 @@ const styles = () => {
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
+}
+
+exports.minStyles = minStyles;
+
+// Styles
+
+const styles = () => {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(rename("style.css"))
+    .pipe(gulp.dest("build/css"))
 }
 
 exports.styles = styles;
@@ -148,7 +163,7 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/sass/**/*.scss", gulp.series("minStyles"));
   gulp.watch("source/*.html", gulp.series("html"));
   gulp.watch("source/js/*.js", gulp.series("script"));
 }
@@ -159,6 +174,7 @@ const build = gulp.series(
   clean,
   gulp.parallel(
     script,
+    minStyles,
     styles,
     normalize,
     html,
