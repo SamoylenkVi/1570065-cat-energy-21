@@ -121,7 +121,7 @@
   @include tablet {
     font-size: $base-font-size;
     line-height: $text-line-height;
-    width: 89%;
+    width: 90%;
     padding: 0 5%;
     margin-top: -9px;
     background-color: $basic-white;
@@ -192,14 +192,23 @@
   background-position: 62% 72%;
 
   @include tablet {
-    background-image: url("../img/before-tablet.png"), url("../img/after-tablet.png");
+    background-image: url("../img/cat-before-tablet.png");
     background-repeat: no-repeat;
-    background-position: 0 -23%, 100% -36%;
+    background-position: 50% -23%;
     z-index: 1;
+
+    @include retina {
+      background-image: url("../img/cat-before-tablet@2x.png");
+    }
   }
 
   @include desktop {
-    background-position: -22% 18%, 112% 12%;
+    background-image: url("../img/cat-before-desktop.png");
+    background-position: 50% 0;
+
+    @include retina {
+      background-image: url("../img/cat-before-desktop@2x.png");
+    }
   }
 }
 

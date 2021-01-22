@@ -111,7 +111,8 @@
     padding-bottom: 35px;
     border: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       .nutrition-program__link-text::before {
         background-image: url("../img/arrow-hov.svg");
         width: 32px;

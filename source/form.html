@@ -7,6 +7,8 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/vendor/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
 </head>
 
 <body class="page__body">
@@ -14,18 +16,14 @@
     <header class="page__header header">
       <div class="header__wrapper wrapper">
         <a href="index.html" class="header__logo">
-          <svg class="header__logo-mobile" width="191" height="37">
-            <use xlink:href="/img/sprite.svg#header-logo-mobile"></use>
-          </svg>
-          <svg class="header__logo-tablet" width="174" height="52">
-            <use xlink:href="/img/sprite.svg#logo-tablet"></use>
-          </svg>
-          <svg class="header__logo-desktop" width="202" height="59">
-            <use xlink:href="/img/sprite.svg#logo-desktop"></use>
-          </svg>
+          <picture class="header__picture">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/header-logo-mobile.svg" alt="Логотип cat Energy" loading="lazy">
+          </picture>
         </a>
         <nav class="header__navigation navigation navigation--no-js">
-          <button class="navigation__toggle" type="button">
+          <button class="navigation__toggle" type="button" aria-label="Открыть главное меню">
             <span class="navigation__toggle-content"></span>
           </button>
           <ul class="navigation__list">
@@ -47,7 +45,7 @@
       <form class="form__wrapper form" action="https://echo.htmlacademy.ru" method="GET">
         <div class="wrapper">
           <h2 class="form__main-title">
-            Заполните анкету, и мы подберем<br/>
+            Заполните анкету, и мы подберем<br />
             программу питания для вашего кота
           </h2>
         </div>
@@ -132,19 +130,19 @@
               <legend class="form__title form__title--extra title">Дополнительно</legend>
               <ul class="form__extra-list">
                 <li class="form__extra-item">
-                  <input class="visually-hidden form__filed-checkbox filed-checkbox" type="checkbox" name="sugar-substitute" id="sugar-substitute" checked />
+                  <input class="visually-hidden form__filed-checkbox filed-checkbox" type="checkbox" name="sugar-substitute" id="sugar-substitute" aria-label="Добавьте для вашего кота Сахарозаменитель" checked />
                   <label class="form__item-name form__item-name--extra" for="sugar-substitute">Сахарозаменитель</label>
                 </li>
                 <li class="form__extra-item">
-                  <input class="visually-hidden form__filed-checkbox filed-checkbox" type="checkbox" name="water" id="water" />
+                  <input class="visually-hidden form__filed-checkbox filed-checkbox" type="checkbox" name="water" id="water" aria-label="Добавьте для вашего кота питьевую воду" />
                   <label class="form__item-name form__item-name--extra" for="water">Питьевая вода</label>
                 </li>
                 <li class="form__extra-item">
-                  <input class="visually-hidden form__filed-checkbox filed-checkbox" type="checkbox" name="milk" id="milk" />
+                  <input class="visually-hidden form__filed-checkbox filed-checkbox" type="checkbox" name="milk" id="milk" aria-label="Добавьте для вашего кота молоко" />
                   <label class="form__item-name form__item-name--extra" for="milk">Молоко</label>
                 </li>
                 <li class="form__extra-item">
-                  <input class="visually-hidden form__filed-checkbox filed-checkbox" type="checkbox" name="vitamins" id="vitamins" />
+                  <input class="visually-hidden form__filed-checkbox filed-checkbox" type="checkbox" name="vitamins" id="vitamins" aria-label="Добавьте для вашего кота витамины" />
                   <label class="form__item-name form__item-name--extra" for="vitamins">Витамины</label>
                 </li>
               </ul>
@@ -189,10 +187,7 @@
             <li class="social__item">
               <a class="social__link" href="">
                 <span class="visually-hidden">В Контакте</span>
-                <svg class="social__icon social__icon--mobile" width="23" height="16" viewBox="0 0 29 18">
-                  <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
-                </svg>
-                <svg class="social__icon social__icon--tablet" width="29" height="17" viewBox="0 0 29 18">
+                <svg class="social__icon social__icon--vkontakte" width="23" height="16" viewBox="0 0 29 18">
                   <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
                 </svg>
               </a>
@@ -200,10 +195,7 @@
             <li class="social__item">
               <a class="social__link" href="">
                 <span class="visually-hidden">Instagram</span>
-                <svg class="social__icon social__icon--mobile" width="16" height="16" viewBox="0 0 23 23">
-                  <use xlink:href="img/sprite.svg#icon_instagram"></use>
-                </svg>
-                <svg class="social__icon social__icon--tablet" width="23" height="23" viewBox="0 0 23 23">
+                <svg class="social__icon social__icon--instagram" viewBox="0 0 23 23">
                   <use xlink:href="img/sprite.svg#icon_instagram"></use>
                 </svg>
               </a>
@@ -211,10 +203,7 @@
             <li class="social__item">
               <a class="social__link" href="">
                 <span class="visually-hidden">Facebook</span>
-                <svg class="social__icon social__icon--mobile" width="22" height="22" viewBox="0 0 15 29">
-                  <use xlink:href="img/sprite.svg#icon_facebook"></use>
-                </svg>
-                <svg class="social__icon social__icon--tablet" width="15" height="29" viewBox="0 0 15 29">
+                <svg class="social__icon social__icon--facebook" viewBox="0 0 15 29">
                   <use xlink:href="img/sprite.svg#icon_facebook"></use>
                 </svg>
               </a>

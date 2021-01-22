@@ -112,6 +112,7 @@
   box-sizing: border-box;
   border: 1px solid $border-grey;
   margin: 0;
+  resize: none;
 
   @include tablet {
     min-height: 52px;
@@ -160,7 +161,7 @@
 }
 
 .form__entry-field--information {
-  padding: 4px 15px 4px;
+  padding: 6.5px 15px 4px;
 
   &:invalid:placeholder-shown {
     border: 2px solid $input-grey;
@@ -280,7 +281,7 @@
 }
 
 .form__entry-field--person {
-  padding: 5px 38px 3px 14px;
+  padding: 7.5px 38px 3px 14px;
 
   &:disabled {
     border: 2px solid $special_dark-grey;
@@ -331,7 +332,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 13px;
+  top: 15px;
   right: 14px;
   pointer-events: none;
   fill: currentColor;
@@ -383,7 +384,7 @@
   }
 }
 
-.filed__radio:checked + .form__item-name--radio::before {
+.form__filed-radio:checked + .form__item-name--radio::before {
   background-color: $basic-green;
   background-clip: content-box;
   padding: 8px;
@@ -393,12 +394,12 @@
   }
 }
 
-.filed__radio:disabled + .form__item-name--radio {
+.form__filed-radio:disabled + .form__item-name--radio {
   opacity: 0.3;
 }
 
-.filed__radio:focus + .form__item-name--radio::before,
-.filed__radio:hover + .form__item-name--radio::before {
+.form__filed-radio:focus + .form__item-name--radio::before,
+.form__filed-radio:hover + .form__item-name--radio::before {
   @include tablet {
     border: 1px solid $hover-grey;
   }
@@ -512,18 +513,18 @@
   }
 }
 
-.filed__checkbox:checked + .form__item-name--extra::before {
+.form__filed-checkbox:checked + .form__item-name--extra::before {
   background-image: url("../img/checked.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
-.filed__checkbox:disabled + .form__item-name--extra {
+.form__filed-checkbox:disabled + .form__item-name--extra {
   opacity: 0.3;
 }
 
-.filed__checkbox:focus + .form__item-name--extra::before,
-.filed__checkbox:hover + .form__item-name--extra::before {
+.form__filed-checkbox:focus + .form__item-name--extra::before,
+.form__filed-checkbox:hover + .form__item-name--extra::before {
   @include tablet {
     border: 1px solid $hover-grey;
   }

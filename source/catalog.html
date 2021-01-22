@@ -7,6 +7,8 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/vendor/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
 </head>
 
 <body class="page__body">
@@ -14,18 +16,14 @@
     <header class="page__header header">
       <div class="header__wrapper wrapper">
         <a href="index.html" class="header__logo">
-          <svg class="header__logo-mobile" width="191" height="37">
-            <use xlink:href="/img/sprite.svg#header-logo-mobile"></use>
-          </svg>
-          <svg class="header__logo-tablet" width="174" height="52">
-            <use xlink:href="/img/sprite.svg#logo-tablet"></use>
-          </svg>
-          <svg class="header__logo-desktop" width="202" height="59">
-            <use xlink:href="/img/sprite.svg#logo-desktop"></use>
-          </svg>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/header-logo-mobile.svg" alt="Логотип cat Energy" loading="lazy">
+          </picture>
         </a>
         <nav class="header__navigation navigation navigation--no-js">
-          <button class="navigation__toggle" type="button">
+          <button class="navigation__toggle" type="button" aria-label="Открыть главное меню">
             <span class="navigation__toggle-content"></span>
           </button>
           <ul class="navigation__list">
@@ -55,12 +53,12 @@
                   <source type="image/webp" srcset="img/catalog-1-mobile.webp 1x, img/catalog-1-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/catalog-1-desktop.png 1x, img/catalog-1-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/catalog-1-tablet.png 1x, img/catalog-1-tablet@2x.png 2x">
-                  <img class="product__picture" src="img/catalog-1-mobile.jpg" srcset="img/catalog-1-mobile@2x.jpg" alt="Банка Cat Energy PRO вкус курица 500г">
+                  <img class="product__picture" src="img/catalog-1-mobile.jpg" srcset="img/catalog-1-mobile@2x.jpg" alt="Банка Cat Energy PRO вкус курица 500г" loading="lazy">
                 </picture>
               </div>
               <div class="product__content">
-                <h3 class="product__title">Cat Energy PRO </br> 500 г</h3>
-                <table class="product__content-list" class="product__content-list">
+                <h3 class="product__title">Cat Energy PRO <br> 500 г</h3>
+                <table class="product__content-list">
                   <tr class="product__content-item">
                     <td class="product__text">Масса</td>
                     <td class="product__text product__text--description">500 г</td>
@@ -87,11 +85,11 @@
                   <source type="image/webp" srcset="img/catalog-2-mobile.webp 1x, img/catalog-2-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/catalog-2-desktop.png 1x, img/catalog-2-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/catalog-2-tablet.png 1x, img/catalog-2-tablet@2x.png 2x">
-                  <img class="product__picture" src="img/catalog-2-mobile.jpg" srcset="img/catalog-2-mobile@2x.jpg" alt="Банка Cat Energy PRO вкус курица 1000г">
+                  <img class="product__picture" src="img/catalog-2-mobile.jpg" srcset="img/catalog-2-mobile@2x.jpg" alt="Банка Cat Energy PRO вкус курица 1000г" loading="lazy">
                 </picture>
               </div>
               <div class="product__content">
-                <h3 class="product__title">Cat Energy PRO </br>1000 г</h3>
+                <h3 class="product__title">Cat Energy PRO <br>1000 г</h3>
                 <table class="product__content-list">
                   <tr class="product__content-item">
                     <td class="product__text">Масса</td>
@@ -119,11 +117,11 @@
                   <source type="image/webp" srcset="img/catalog-3-mobile.webp 1x, img/catalog-3-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/catalog-3-desktop.png 1x, img/catalog-3-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/catalog-3-tablet.png 1x, img/catalog-3-tablet@2x.png 2x">
-                  <img class="product__picture" src="img/catalog-3-mobile.jpg" srcset="img/catalog-3-mobile@2x.jpg" alt="Банка Cat Energy PRO вкус Рыба 500г">
+                  <img class="product__picture" src="img/catalog-3-mobile.jpg" srcset="img/catalog-3-mobile@2x.jpg" alt="Банка Cat Energy PRO вкус Рыба 500г" loading="lazy">
                 </picture>
               </div>
               <div class="product__content">
-                <h3 class="product__title">Cat Energy PRO </br>500 г</h3>
+                <h3 class="product__title">Cat Energy PRO <br>500 г</h3>
                 <table class="product__content-list">
                   <tr class="product__content-item">
                     <td class="product__text">Масса</td>
@@ -151,11 +149,11 @@
                   <source type="image/webp" srcset="img/catalog-4-mobile.webp 1x, img/catalog-4-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/catalog-4-desktop.png 1x, img/catalog-4-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/catalog-4-tablet.png 1x, img/catalog-4-tablet@2x.png 2x">
-                  <img class="product__picture" src="img/catalog-4-mobile.jpg" srcset="img/catalog-4-mobile@2x.jpg" alt="Банка Cat Energy PRO вкус Рыба 1000г">
+                  <img class="product__picture" src="img/catalog-4-mobile.jpg" srcset="img/catalog-4-mobile@2x.jpg" alt="Банка Cat Energy PRO вкус Рыба 1000г" loading="lazy">
                 </picture>
               </div>
               <div class="product__content">
-                <h3 class="product__title">Cat Energy PRO </br>1000 г</h3>
+                <h3 class="product__title">Cat Energy PRO <br>1000 г</h3>
                 <table class="product__content-list">
                   <tr class="product__content-item">
                     <td class="product__text">Масса</td>
@@ -183,11 +181,11 @@
                   <source type="image/webp" srcset="img/catalog-5-mobile.webp 1x, img/catalog-5-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/catalog-5-desktop.png 1x, img/catalog-5-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/catalog-5-tablet.png 1x, img/catalog-5-tablet@2x.png 2x">
-                  <img class="product__picture" src="img/catalog-5-mobile.jpg" srcset="img/catalog-5-mobile@2x.jpg" alt="Банка Cat Energy  вкус Гречка 500г">
+                  <img class="product__picture" src="img/catalog-5-mobile.jpg" srcset="img/catalog-5-mobile@2x.jpg" alt="Банка Cat Energy  вкус Гречка 500г" loading="lazy">
                 </picture>
               </div>
               <div class="product__content">
-                <h3 class="product__title">Cat Energy Slim </br>500 г</h3>
+                <h3 class="product__title">Cat Energy Slim <br>500 г</h3>
                 <table class="product__content-list">
                   <tr class="product__content-item">
                     <td class="product__text">Масса</td>
@@ -215,7 +213,7 @@
                   <source type="image/webp" srcset="img/catalog-6-mobile.webp 1x, img/catalog-6-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/catalog-6-desktop.png 1x, img/catalog-6-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/catalog-6-tablet.png 1x, img/catalog-6-tablet@2x.png 2x">
-                  <img class="product__picture" src="img/catalog-6-mobile.jpg" srcset="img/catalog-6-mobile@2x.jpg" alt="Банка Cat Energy Slim вкус гречка 1000г">
+                  <img class="product__picture" src="img/catalog-6-mobile.jpg" srcset="img/catalog-6-mobile@2x.jpg" alt="Банка Cat Energy Slim вкус гречка 1000г" loading="lazy">
                 </picture>
               </div>
               <div class="product__content">
@@ -247,11 +245,11 @@
                   <source type="image/webp" srcset="img/catalog-7-mobile.webp 1x, img/catalog-7-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/catalog-7-desktop.png 1x, img/catalog-7-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/catalog-7-tablet.png 1x, img/catalog-7-tablet@2x.png 2x">
-                  <img class="product__picture" src="img/catalog-7-mobile.jpg" srcset="img/catalog-7-mobile@2x.jpg" alt="Банка Cat Energy Slim вкус рис 500г">
+                  <img class="product__picture" src="img/catalog-7-mobile.jpg" srcset="img/catalog-7-mobile@2x.jpg" alt="Банка Cat Energy Slim вкус рис 500г" loading="lazy">
                 </picture>
               </div>
               <div class="product__content">
-                <h3 class="product__title">Cat Energy Slim </br>500 г</h3>
+                <h3 class="product__title">Cat Energy Slim <br>500 г</h3>
                 <table class="product__content-list">
                   <tr class="product__content-item">
                     <td class="product__text">Масса</td>
@@ -273,14 +271,17 @@
           <div class="catalog__product product product--more">
             <div class="product__wrapper product__wrapper--more">
               <div class="product__content product__content--more">
-                <h3 class="product__title product__title--more">Показать еще </br>100500 товаров </h3>
+                <h3 class="product__title product__title--more">
+                  Показать еще <br>100500 товаров
+                </h3>
                 <p class="product__text product__text--more">
-                  На самом деле вкусов </br>гораздо больше!
+                  На самом деле вкусов <br>гораздо больше!
                 </p>
               </div>
               <a class="product__link product__link--more link">Показать все</a>
             </div>
           </div>
+        </div>
       </section>
       <section class="extra-product">
         <div class="extra-product__wrapper wrapper">
@@ -339,7 +340,7 @@
             <div class="extra-product__banner">
               <h2 class="visually-hidden">Подарок для вашего кота</h2>
               <p class="extra-product__banner-text">
-                Закажите все </br> и получите чехол для </br> кота в подарок!
+                Закажите все <br> и получите чехол для <br> кота в подарок!
               </p>
             </div>
           </div>
@@ -376,10 +377,7 @@
             <li class="social__item">
               <a class="social__link" href="">
                 <span class="visually-hidden">В Контакте</span>
-                <svg class="social__icon social__icon--mobile" width="23" height="16" viewBox="0 0 29 18">
-                  <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
-                </svg>
-                <svg class="social__icon social__icon--tablet" width="29" height="17" viewBox="0 0 29 18">
+                <svg class="social__icon social__icon--vkontakte" width="23" height="16" viewBox="0 0 29 18">
                   <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
                 </svg>
               </a>
@@ -387,10 +385,7 @@
             <li class="social__item">
               <a class="social__link" href="">
                 <span class="visually-hidden">Instagram</span>
-                <svg class="social__icon social__icon--mobile" width="16" height="16" viewBox="0 0 23 23">
-                  <use xlink:href="img/sprite.svg#icon_instagram"></use>
-                </svg>
-                <svg class="social__icon social__icon--tablet" width="23" height="23" viewBox="0 0 23 23">
+                <svg class="social__icon social__icon--instagram" viewBox="0 0 23 23">
                   <use xlink:href="img/sprite.svg#icon_instagram"></use>
                 </svg>
               </a>
@@ -398,10 +393,7 @@
             <li class="social__item">
               <a class="social__link" href="">
                 <span class="visually-hidden">Facebook</span>
-                <svg class="social__icon social__icon--mobile" width="22" height="22" viewBox="0 0 15 29">
-                  <use xlink:href="img/sprite.svg#icon_facebook"></use>
-                </svg>
-                <svg class="social__icon social__icon--tablet" width="15" height="29" viewBox="0 0 15 29">
+                <svg class="social__icon social__icon--facebook" viewBox="0 0 15 29">
                   <use xlink:href="img/sprite.svg#icon_facebook"></use>
                 </svg>
               </a>

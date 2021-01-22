@@ -50,7 +50,6 @@
   width: 40px;
   height: 40px;
 
-
   @include tablet {
     width: 50px;
     height: 50px;
@@ -73,19 +72,34 @@
 .social__icon {
   fill: currentColor;
   color: $social-grey;
-}
 
-.social__icon--mobile {
-  @include tablet {
-    display: none;
+  &--vkontakte {
+    width: 23px;
+    height: 16px;
+
+    @include tablet {
+      width: 29px;
+      height: 17px;
+    }
   }
-}
 
-.social__icon--tablet {
-  display: none;
+  &--instagram {
+    width: 15px;
+    height: 16px;
 
-  @include tablet {
-    height: 30px;
-    display: inline;
+    @include tablet {
+      width: 22px;
+      height: 23px;
+    }
+  }
+
+  &--facebook {
+    width: 22px;
+    height: 22px;
+
+    @include tablet {
+      width: 15px;
+      height: 29px;
+    }
   }
 }

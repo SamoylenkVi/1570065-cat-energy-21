@@ -9,11 +9,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 16px;
-  }
-
-  @include desktop {
-    padding-bottom: 15px;
+    padding-bottom: 0;
   }
 }
 
@@ -21,15 +17,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 91px;
+  min-height: 93px;
   border-bottom: 1px solid $special-border-grey;
+  padding-top: 10px;
 
   &--form {
-    min-height: 93px;
+    min-height: 99px;
   }
 
   @include tablet {
     border: none;
+    padding: 0;
   }
 }
 
@@ -50,7 +48,7 @@
 
 .footer__copyright {
   min-height: 79px;
-  padding-top: 20px;
+  padding-top: 22px;
 
   @include tablet {
     display: flex;
