@@ -1,4 +1,4 @@
-.footer__social {
+.social {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -74,9 +74,6 @@
   color: $social-grey;
 
   &--vkontakte {
-    width: 23px;
-    height: 16px;
-
     @include tablet {
       width: 29px;
       height: 17px;
@@ -84,9 +81,6 @@
   }
 
   &--instagram {
-    width: 15px;
-    height: 16px;
-
     @include tablet {
       width: 22px;
       height: 23px;
@@ -94,9 +88,6 @@
   }
 
   &--facebook {
-    width: 22px;
-    height: 22px;
-
     @include tablet {
       width: 15px;
       height: 29px;

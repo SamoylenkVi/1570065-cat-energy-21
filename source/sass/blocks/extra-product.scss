@@ -47,7 +47,7 @@
 
   &::before {
     @include border;
-    top: 50%;
+    top: 47%;
 
     @include tablet {
       top: 23px;
@@ -108,6 +108,7 @@
     grid-template-columns: 3fr 1fr;
     padding: 0;
     gap: 40px;
+    align-items: center;
   }
 }
 
@@ -181,14 +182,6 @@
   }
 }
 
-.extra-product-link-wrapper {
-  @include desktop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 3px 2px 0;
-  }
-}
 
 .extra-product__link {
   @include desktop {

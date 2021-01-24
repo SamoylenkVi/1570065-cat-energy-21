@@ -109,25 +109,24 @@
   flex-grow: 1;
   width: 0;
   min-height: 46px;
+  line-height: 30px;
   box-sizing: border-box;
-  border: 1px solid $border-grey;
+  border: 1px solid $input-grey;
   margin: 0;
   resize: none;
+  padding: 7px 13px;
+  box-shadow: none;
+
 
   @include tablet {
     min-height: 52px;
     font-size: $header-font-size;
     line-height: $special-tablet-link;
-
-    &:focus {
-      border: 2px solid $special_dark-grey;
-      outline: none;
-    }
   }
 
   &::placeholder {
-    @include font-options($family-oswald, $form-font-size, $base-line-height, $normal-font-weight, $special_dark-grey);
-    text-transform: uppercase;
+    color: $special_dark-grey;
+    opacity: 1;
 
     @include tablet {
       font-size: $header-font-size;
@@ -157,36 +156,37 @@
 
   @include tablet {
     padding-top: 11px;
+    margin-right: 20px;
   }
 }
 
 .form__entry-field--information {
-  padding: 6.5px 15px 4px;
-
   &:invalid:placeholder-shown {
-    border: 2px solid $input-grey;
+    border: 1px solid $input-grey;
+    outline: none;
   }
 
+  &:hover,
   &:invalid:hover,
   &:valid:hover {
     border: 1px solid $border-grey;
+    outline: none;
   }
 
+  &:focus,
   &:invalid:focus,
   &:valid:focus {
-    border: 1px solid $special_dark-grey;
+    border-color: $special_dark-grey;
+    outline: 1px solid $special_dark-grey;
   }
 
   &:invalid {
-    border: 2px solid $error-red;
+    border-color: $error-red;
+    outline: 1px solid $error-red;
   }
 
   @include tablet {
-    padding: 10px 21px 4px;
-  }
-
-  @include desktop {
-    padding-top: 3px;
+    padding: 7px 16px 4px;
   }
 }
 
@@ -206,7 +206,7 @@
   }
 
   @include desktop {
-    padding-bottom: 46px;
+    padding-bottom: 49px;
   }
 }
 
@@ -222,7 +222,7 @@
   }
 
   @include desktop {
-    padding: 0 0 21px 2px;
+    padding: 0 0 20px 2px;
   }
 }
 
@@ -272,6 +272,7 @@
 
   @include tablet {
     margin-right: 18px;
+    padding-top: 12px;
   }
 
   @include desktop {
@@ -280,29 +281,39 @@
   }
 }
 
+.form__item-name--mail {
+  @include desktop {
+    margin-right: 21px;
+  }
+}
+
 .form__entry-field--person {
-  padding: 7.5px 38px 3px 14px;
+  &:invalid:placeholder-shown {
+    border: 1px solid $input-grey;
+    outline: none;
+  }
 
   &:disabled {
-    border: 2px solid $special_dark-grey;
-  }
-
-  &:invalid:placeholder-shown {
-    border: 2px solid $input-grey;
-  }
-
-  &:invalid:hover,
-  &:valid:hover {
-    border: 1px solid $border-grey;
-  }
-
-  &:invalid:focus,
-  &:valid:focus {
     border: 1px solid $special_dark-grey;
   }
 
   &:invalid {
-    border: 2px solid $error-red;
+    border-color: $error-red;
+    outline: 1px solid $error-red;
+  }
+
+  &:hover,
+  &:invalid:hover,
+  &:valid:hover {
+    border: 1px solid $border-grey;
+    outline: none;
+  }
+
+  &:focus,
+  &:invalid:focus,
+  &:valid:focus {
+    border-color: $special_dark-grey;
+    outline: 1px solid $special_dark-grey;
   }
 
   @include tablet {
@@ -310,7 +321,7 @@
   }
 
   @include desktop {
-    padding: 6px 43px 3px 18px;
+    padding: 11px 43px 11px 18px;
   }
 }
 
@@ -347,6 +358,10 @@
   }
 
   &--mail {
+    @include tablet {
+      top: 19px;
+    }
+
     @include desktop {
       right: 21px;
     }
@@ -371,12 +386,16 @@
   @include tablet {
     padding-bottom: 64px;
   }
+
+  @include desktop {
+    padding-bottom: 66px;
+  }
 }
 
 .form__entry-field--comment {
   resize: none;
   min-height: 151px;
-  padding: 10px 13px;
+  padding: 4px 13px;
 
   @include tablet {
     min-height: 175px;
@@ -494,9 +513,8 @@
     width: 30px;
     height: 30px;
     border: 1px solid $border-grey;
-    top: 50%;
+    top: 0;
     left: 0;
-    transform: translate(0, -50%);
     display: flex;
     justify-content: center;
     align-items: center;

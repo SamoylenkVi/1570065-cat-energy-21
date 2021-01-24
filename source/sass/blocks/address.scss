@@ -19,22 +19,26 @@
 .address__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: end;
+  align-items: center;
   min-height: 114px;
-  padding-bottom: 27px;
+  padding-top: 4px;
 
   &--form {
-    padding-bottom: 19px;
+    padding-top: 10px;
   }
 
   &--catalog {
-    padding-bottom: 12px;
+    padding-top: 3px;
   }
 
   @include tablet {
     align-items: center;
     min-height: 201px;
     padding-bottom: 2px;
+
+    &--form {
+      padding-bottom: 10px;
+    }
   }
 
   @include desktop {

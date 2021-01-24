@@ -20,7 +20,7 @@
   background-repeat: no-repeat;
   background-size: 50px 53px;
   background-position: 22px 21px;
-  padding: 9px 20px 20px;
+  padding: 9px 20px 15px;
   background-color: $basic-grey;
 
   @include tablet {
@@ -78,13 +78,15 @@
 
 .nutrition-program__content {
   margin: 0;
-  padding-bottom: 22px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $special-border-grey;
 
   @include tablet {
     font-size: $form-font-size;
     line-height: $number-line-height;
     padding: 0;
     padding-bottom: 52px;
+    border: none;
   }
 
   @include desktop {
@@ -95,25 +97,39 @@
 .nutrition-program__link {
   @include font-options($family-oswald, $form-font-size, $special-line-height, $normal-font-weight, $basic-black);
   @include link-default-remove($basic-black);
-  border-top: 1px solid $special-border-grey;
   text-transform: uppercase;
-  min-height: 24px;
-  padding: 19px 51px 0 0;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  padding: 5px 41px 5px 0;
+  margin-top: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -8px;
+    width: 32px;
+    height: 13px;
+  }
 
   @include tablet {
     font-size: $header-font-size;
     line-height: $special-tablet-link;
-    padding: 0;
-    padding-bottom: 35px;
-    border: none;
+    padding: 0 48px 5px 0;
+    margin-top: 0;
+    margin-bottom: 29px;
+
+    &::before {
+      top: 43%;
+    }
 
     &:hover,
     &:focus {
-      .nutrition-program__link-text::before {
+      &::before {
         background-image: url("../img/arrow-hov.svg");
         width: 32px;
         height: 13px;
@@ -126,36 +142,11 @@
   }
 
   @include desktop {
-    padding-bottom: 55px;
-  }
-}
-
-.nutrition-program__link-text {
-  margin: 0;
-  margin-right: 15px;
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    background-image: url("../img/arrow.svg");
-    background-repeat: no-repeat;
-    top: 10%;
-    right: -48px;
-    width: 32px;
-    height: 13px;
-  }
-
-  @include tablet {
-    margin-right: 24px;
+    padding-right: 60px;
+    margin-bottom: 53px;
 
     &::before {
-      top: 22%;
-      right: -56px;
+      right: 0;
     }
-  }
-
-  @include desktop {
-    margin-right: 28px;
   }
 }

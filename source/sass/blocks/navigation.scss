@@ -32,57 +32,26 @@
   .navigation__toggle-content {
     content: "";
     position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translateX(50%);
-    width: 36px;
-    height: 2px;
-    background-color: $basic-black;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 50%;
-      transform: translate(50%, -10px);
-      width: 36px;
-      height: 2px;
-      background-color: $basic-black;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 50%;
-      transform: translate(50%, 10px);
-      width: 36px;
-      height: 2px;
-      background-color: $basic-black;
-    }
+    background-image: url("../img/Logo_clouse.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+    height: 20px;
+    width: 23px;
+    transform: translate(-50%, 50%);
   }
 }
 
 .navigation--open .navigation__toggle-content {
   content: "";
   position: absolute;
+  background-image: url("../img/Logo_open.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
   top: 50%;
   right: 50%;
-  transform: translateX(50%) rotate(45deg);
-  width: 25px;
-  height: 2px;
-  background-color: $basic-black;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(45%) rotate(90deg);
-    width: 25px;
-    height: 2px;
-    background-color: $basic-black;
-  }
+  transform: translate(50%, -50%);
 }
 
 .navigation__list {
@@ -138,7 +107,7 @@
     align-items: flex-end;
     justify-content: flex-end;
     margin-left: 36px;
-    padding-bottom: 6px;
+    padding-bottom: 9px;
     border: none;
 
     &:hover,
@@ -154,6 +123,7 @@
   @include desktop {
     font-size: $header-font-size;
     line-height: $special-tablet-link;
+    margin-top: 5px;
     z-index: 1;
 
     &--index {
@@ -163,13 +133,13 @@
 
   &:not([href]) {
     @include tablet {
-      border-bottom: 1px solid $basic-green;
+      border-bottom: 2px solid $basic-green;
     }
   }
 
   &--index:not([href]) {
     @include desktop {
-      border-bottom: 1px solid $basic-white;
+      border-bottom: 2px solid $basic-white;
     }
   }
 }

@@ -2,7 +2,7 @@
   padding-bottom: 43px;
 
   @include tablet {
-    padding-bottom: 55px;
+    padding-bottom: 11px;
   }
 
   @include desktop {
@@ -18,11 +18,11 @@
   @include tablet {
     font-size: $heading-tablet-size;
     line-height: $heading-tablet-line;
-    padding: 42px 0 67px;
+    padding: 45px 0 67px;
   }
 
   @include desktop {
-    padding: 75px 0 70px;
+    padding: 72px 0 70px;
   }
 }
 
@@ -37,7 +37,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 57px;
-    grid-row-gap: 81px;
+    grid-row-gap: 37px;
   }
 
   @include desktop {
@@ -53,10 +53,46 @@
   padding-left: 81px;
   min-height: 60px;
 
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $basic-green;
+    top: 1px;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: 50% 45%;
+  }
+
+  &--healthy::before {
+    background-image: url("../img/healthy.svg");
+  }
+
+  &--quick::before {
+    background-image: url("../img/quick.svg");
+  }
+
+  &--economical::before {
+    background-image: url("../img/economical.svg");
+  }
+
+  &--effective::before {
+    background-image: url("../img/effective.svg");
+  }
+
   @include tablet {
     padding: 118px 61px 46px 0;
     background-repeat: no-repeat;
     background-position: 125px 6px;
+    min-height: 280px;
+    position: relative;
+
+    &::before {
+      top: 5px;
+      width: 80px;
+      height: 80px;
+    }
 
     &--healthy {
       background-image: url("../img/one.svg");
@@ -78,43 +114,10 @@
   @include desktop {
     padding: 114px 1px 46px 0;
     background-position: 125px 0;
-  }
-}
+    min-height: 232px;
 
-.advantages__picture {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-color: $basic-green;
-  top: 1px;
-  left: 0;
-  background-repeat: no-repeat;
-  background-position: 50% 45%;
-
-  &--healthy {
-    background-image: url("../img/healthy.svg");
-  }
-
-  &--quick {
-    // background-image: url("../img/quick.svg");
-    background-image: url("../img/quick.svg");
-  }
-
-  &--economical {
-    background-image: url("../img/economical.svg");
-  }
-
-  &--effective {
-    background-image: url("../img/effective.svg");
-  }
-
-  @include tablet {
-    top: 7px;
-    width: 80px;
-    height: 80px;
-  }
-
-  @include desktop {
-    top: 1px;
+    &::before {
+      top: 1px;
+    }
   }
 }

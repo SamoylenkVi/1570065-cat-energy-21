@@ -7,8 +7,8 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/vendor/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
-  <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
+  <link rel="preload" href="/fonts/oswaldregular.woff2" as="font" crossorigin>
+  <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" crossorigin>
 </head>
 
 <body class="page__body">
@@ -66,7 +66,7 @@
                 </li>
                 <li class="form__information-item">
                   <label for="cat-age" class="form__item-name form__item-name--information">Возраст (лет):</label>
-                  <input class="form__entry-field form__entry-field--information filed-input-information" type="text" id="cat-age" name="cat-age" value="7" pattern="[\d]*" aria-label="Введите возраст вашего кота" />
+                  <input class="form__entry-field form__entry-field--information filed-input-information" type="text" id="cat-age" name="cat-age" placeholder="7" pattern="[\d]*" aria-label="Введите возраст вашего кота" />
                 </li>
               </ul>
             </fieldset>
@@ -94,12 +94,12 @@
         <div class="form__box form__box--additional">
           <div class="wrapper wrapper--form">
             <fieldset class="form__person-information form__border-box">
-              <legend class="form__title title">
+              <legend class="form__title form__title--person title">
                 Контактные данные <br>(владельца кота)
               </legend>
               <ul class="form__information-list form__information-list--person">
                 <li class="form__information-item form__information-social">
-                  <label for="email" class="form__item-name form__item-name--person">E-mail:*</label>
+                  <label for="email" class="form__item-name form__item-name--person form__item-name--mail">E-mail:*</label>
                   <input class="form__entry-field form__entry-field--person filed-person-information" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" aria-label="Введите ваш email" required pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" />
                   <svg class="form__information-picture form__information-picture--mail" width="20" height="20">
                     <use xlink:href="img/sprite.svg#icon_email"></use>
@@ -179,6 +179,7 @@
     <footer class="page__footer footer">
       <div class="footer__wrapper wrapper">
         <a class="footer__logo footer__logo--form" href="">
+          <span class="visually-hidden">Логотип Cat Energy</span>
           <svg class="footer__logo-picture" width="128" height="26">
             <use xlink:href="img/sprite.svg#footer-logo"></use>
           </svg>
@@ -197,7 +198,7 @@
             <li class="social__item">
               <a class="social__link" href="">
                 <span class="visually-hidden">Instagram</span>
-                <svg class="social__icon social__icon--instagram" viewBox="0 0 23 23">
+                <svg class="social__icon social__icon--instagram" width="15" height="16" viewBox="0 0 23 23">
                   <use xlink:href="img/sprite.svg#icon_instagram"></use>
                 </svg>
               </a>
@@ -205,7 +206,7 @@
             <li class="social__item">
               <a class="social__link" href="">
                 <span class="visually-hidden">Facebook</span>
-                <svg class="social__icon social__icon--facebook" viewBox="0 0 15 29">
+                <svg class="social__icon social__icon--facebook" width="22" height="22" viewBox="0 0 15 29">
                   <use xlink:href="img/sprite.svg#icon_facebook"></use>
                 </svg>
               </a>
