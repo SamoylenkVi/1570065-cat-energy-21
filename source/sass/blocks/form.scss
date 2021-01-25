@@ -396,6 +396,17 @@
   resize: none;
   min-height: 151px;
   padding: 4px 13px;
+  margin-top: 1px;
+
+  &:hover {
+    border: 1px solid $border-grey;
+    outline: none;
+  }
+
+  &:focus {
+    border-color: $special_dark-grey;
+    outline: 1px solid $special_dark-grey;
+  }
 
   @include tablet {
     min-height: 175px;
